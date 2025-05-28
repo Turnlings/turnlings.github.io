@@ -1,0 +1,17 @@
+---
+layout: home
+---
+
+<h1>My Portfolio</h1>
+<p>Here are some projects</p>
+
+<h2>Projects</h2>
+<ul>
+  {% for project in site.projects %}
+    <li>
+      <a href="{{ project.url }}">{{ project.title }}</a><br>
+      <small>{{ project.description }}</small>
+      <a href="{{ project.link_url }}">{{ project.link_name }}</a><br>
+    </li>
+  {% endfor %}
+</ul>
