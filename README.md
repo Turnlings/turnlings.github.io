@@ -1,7 +1,7 @@
 ## Hello!
 I'm a computer science student who enjoys making things, from games to personal tools.
 
-🔭 I’m currently working on a website to replace the spreadsheet I use to track my progress.
+🔭 I’m currently working on a website to replace the spreadsheet I use to track my progress.  
 🌱 I’m currently learning C out of curiosity.
 
 <!--
