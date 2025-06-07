@@ -3,7 +3,7 @@ title: Rainbow Badge Management
 description: A badge management system for local rainbows leaders.
 layout: project
 image_url: /assets/images/rainbows/thumbnail.png
-order: 2
+order: 3
 ---
 Initially a university group project for COM3420 - Software Hut. We were paired with a real client from the local area, in our case a rainbows leader. We successfully planned and built a system for tracking badge achievements using Ruby on Rails.
 
