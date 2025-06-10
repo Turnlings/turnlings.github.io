@@ -1,6 +1,7 @@
 ---
 title: The Continental System 2
 description: (Ongoing) Unity game
+icon: devicon-csharp-plain
 layout: project
 order: 6
 ---

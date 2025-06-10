@@ -1,6 +1,7 @@
 ---
 title: Rainbow Badge Management
 description: A badge management system for local rainbows leaders.
+icon: devicon-ruby-plain
 layout: project
 image_url: /assets/images/rainbows/thumbnail.png
 order: 3

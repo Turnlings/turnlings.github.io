@@ -14,7 +14,8 @@
 }
 
 .project-card-link h3,
-.project-card-link p {
+.project-card-link p,
+.project-card-link i {
     color: black;
     margin: 0;
 }

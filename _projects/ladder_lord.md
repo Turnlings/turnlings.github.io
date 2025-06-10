@@ -1,6 +1,7 @@
 ---
 title: Ladder Lord
 description: A GMTK2024 Game Jam submission.
+icon: devicon-csharp-plain
 layout: project
 link_name: itch.io
 link_url: https://turnlings.itch.io/ladder-lord

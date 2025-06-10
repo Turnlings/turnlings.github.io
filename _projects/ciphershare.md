@@ -1,6 +1,7 @@
 ---
 title: Ciphershare
 description: Secure file transfer for HackSheffield9.
+icon: devicon-go-original-wordmark
 layout: project
 link_name: Github
 link_url: https://github.com/SecretSheppy/ciphershare
