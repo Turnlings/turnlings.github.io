@@ -15,7 +15,6 @@ Worked in a team of 4 to create a secure file transfer system using the gorilla 
 - Gorilla
 - MongoDB
 
-
 ## Images
 ### Badge management
 ![Main page](/assets/images/ciphershare/examples.png)

@@ -5,7 +5,7 @@ icon: devicon-csharp-plain
 layout: project
 order: 6
 ---
-This is my ongoing project that is an attempt to make a Napoleonic grand strategy game, inspired by those of Paradox Interactive.
+This is my ongoing project that is an attempt to make a Napoleonic grand strategy game, inspired by those of Paradox Interactive. Essentially it is me realising the vision of my A-Level coursework project, with a modern engine and all the skills I have gained since.
 
 ## Technologies
 - Unity

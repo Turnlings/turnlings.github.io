@@ -8,7 +8,9 @@ link_url: https://github.com/Turnlings/continental-system
 image_url: /assets/images/continental_system/thumbnail.png
 order: 7
 ---
-As the sole developer of this game, and restrictions on use of libraries I faced many unique challenges. I had to create my own custom UI system, (something else here), and gained experience with common algorithms: like A* for unit pathfinding.
+As this was a piece of coursework we faced heavy restrictions on the use of external libraries and frameworks, because of this I used LibGDX purely for drawing the to screen and getting user inputs. This meant that the UI system (something else here) were all custom built.
+
+I also had to trace the map of Europe and colour each region differently to build my map.
 
 ## Technologies
 - Java
