@@ -53,5 +53,24 @@
 
 .project-card h3 {
     font-weight: bold;
-    margin: 12px 0 8px;
+    margin: 12px 0 0px;
+    display: inline;
+}
+
+.project-card p {
+    margin-bottom: auto;
+}
+
+.project-footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-meta {
+    float: right;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
 }

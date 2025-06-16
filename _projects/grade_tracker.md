@@ -1,7 +1,9 @@
 ---
 title: Grade Tracker
 description: (Ongoing) A web app to track university assessment progress and time spent on tasks.
-icon: devicon-rails-plain
+icon: 
+    - devicon-ruby-plain
+    - devicon-rails-plain
 layout: project
 link_name: Github
 link_url: https://github.com/Turnlings/grade-tracker
