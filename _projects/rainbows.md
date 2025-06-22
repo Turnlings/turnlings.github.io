@@ -17,6 +17,12 @@ I personally worked across the system, from design, to implementation, to testin
 - PostreSQL
 - Git
 
+## Coursework Feedback
+This was my favourite module of the year and this was reflected in our grade, personally recieving a <insert here>%
+
+Our official client feedback was:
+*"The system you have developed is excellent and surpassed my expectations. Well done!"*
+
 ## Images
 ### Badge management
 ![Badge Management](/assets/images/rainbows/badges.png)

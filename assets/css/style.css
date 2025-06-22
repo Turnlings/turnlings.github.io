@@ -10,7 +10,7 @@
     color: black;
     display: flex;
     flex-direction: column;
-    width: 300px;
+    max-width: 350px;
 }
 
 .project-card-link h3,
@@ -33,11 +33,23 @@
 .project-card {
     border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 16px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     background-color: #fff;
+
+    .content {
+        margin: 0 12px;
+        h3 {
+            font-weight: bold;
+            margin: 12px 0 0px;
+            display: inline;
+        }
+
+        p {
+            margin-bottom: auto;
+        }
+    }
 }
 
 .project-card:hover {
@@ -48,21 +60,12 @@
 .project-image {
     max-width: 100%;
     height: auto;
-    border-radius: 4px;
-}
-
-.project-card h3 {
-    font-weight: bold;
-    margin: 12px 0 0px;
-    display: inline;
-}
-
-.project-card p {
-    margin-bottom: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .project-footer {
-    margin-top: auto;
+    margin: auto 16px 16px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
