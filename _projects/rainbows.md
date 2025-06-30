@@ -6,6 +6,7 @@ icon:
     - devicon-rails-plain
 layout: project
 image_url: /assets/images/rainbows/thumbnail.png
+featured: true
 order: 4
 ---
 Initially a university group project for *COM3420 - Software Hut*. As a team of 6 we were paired with a real client from the local area, in our case a rainbows leader. We successfully planned and built a system for tracking badge achievements using Ruby on Rails.  

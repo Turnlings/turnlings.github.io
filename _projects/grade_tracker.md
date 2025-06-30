@@ -7,6 +7,7 @@ icon:
 layout: project
 link_name: Github
 link_url: https://github.com/Turnlings/grade-tracker
+featured: true
 order: 1
 ---
 An automation of a spreadsheet I used.

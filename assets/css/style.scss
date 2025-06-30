@@ -1,0 +1,220 @@
+---
+---
+.empty {} // Stops claiming theres an error due to my setup
+$primary-color: #242424;
+$secondary-color: #f0f0f0;
+$tertiary-color: #d5d5d5;
+$base-page-width: 800px;
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $secondary-color;
+    color: $primary-color;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: $primary-color;
+    color: $secondary-color;
+
+    .right-links {
+        padding: 10px;
+        margin: 0 auto;
+        max-width: $base-page-width;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    a {
+        font-size: 18px;
+        color: $secondary-color;
+        text-decoration: none;
+        padding: 5px 15px;
+        display: inline-block;
+    }
+}
+
+.main-page {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: $base-page-width;
+}
+
+.project-item {
+    margin-bottom: 10px;
+    .title {
+        font-size: 1.5em;
+        color: $primary-color;
+        text-decoration: none;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.project {
+    padding: 10px;
+    margin: 0 auto;
+    max-width: $base-page-width;
+    h1 {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .project-github-link {
+        display: block;
+        text-align: center;
+        a {
+            color: $primary-color;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+}
+
+.contact-me {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 600px;
+
+    a {
+        width: 40px;
+        color: $primary-color;
+        text-decoration: none;
+    }
+
+    #email, #message {
+        width: 100%;
+        max-width: 580px;
+        padding: 10px;
+        margin: 0;
+        border: 1px solid $tertiary-color;
+        border-radius: 4px;
+    }
+
+    button {
+        font-size: 16px;
+        width: 100%;
+        border-radius: 4px;
+        background-color: $primary-color;
+        color: $secondary-color;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
+
+blockquote {
+    border-left: 4px solid $tertiary-color;
+    padding-left: 1em;
+    margin: 1em 0;
+    font-style: italic;
+
+    ul {
+        padding-left: 20px;
+    }
+}
+
+.tertiary-color {
+    color: $tertiary-color;
+}
+
+footer {
+    background-color: $tertiary-color;
+}
+
+
+
+// Old stuff
+
+.project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card-link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+}
+
+.project-card-link h3,
+.project-card-link p,
+.project-card-link i {
+    color: black;
+    margin: 0;
+}
+
+.project-card-link:hover h3,
+.project-card-link:hover p {
+    color: black;
+}
+
+.project-card-link:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.project-card {
+    border: 1px solid $tertiary-color;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: $secondary-color;
+
+    .content {
+        margin: 0 12px;
+        h3 {
+            font-weight: bold;
+            margin: 12px 0 0px;
+            display: inline;
+        }
+
+        p {
+            margin-bottom: auto;
+        }
+    }
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.project-footer {
+    margin: auto 16px 16px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-meta {
+    float: right;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}

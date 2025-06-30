@@ -1,46 +1,71 @@
 ---
 layout: home
+nav: true
+title: Portfolio
 ---
 
-<head>
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-</head>
+<div class="main-page">
+  <h1>Ryan Turner</h1>
+  <p>Here are some projects
+    Icons from <a href="https://devicon.dev/">Devicon</a>.
 
-<h1>My Portfolio</h1>
-<p>Here are some projects
-  Icons from <a href="https://devicon.dev/">Devicon</a>.
+  </p>
 
-</p>
-
-<h2>Projects</h2>
-<div class="project-cards">
-  {% assign sorted_projects = site.projects | sort: "order" %}
-  {% for project in sorted_projects %}
-    <div class="project-card">
-      <div>
-        <a href="{{ project.url }}" class="project-card-link">
-          <img src="{{ project.image_url }}" alt="{{ project.title }} image" class="project-image">
-          <div class="content">
-            <h3 class="project-title">{{ project.title }}</h3>
-            <p>{{ project.description }}</p>
+  <h2>Featured Projects</h2>
+  <div class="project-cards">
+    {% assign sorted_projects = site.projects | sort: "order" %}
+    {% for project in sorted_projects %}
+      {% if project.featured %}
+        <div class="project-card">
+          <div>
+            <a href="{{ project.url }}" class="project-card-link">
+              <img src="{{ project.image_url }}" alt="{{ project.title }} image" class="project-image">
+              <div class="content">
+                <h3 class="project-title">{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
-      <div class="project-footer">
-        <div class="view-more">
-          <a href="{{ project.url }}" class="view-more-link">View More</a>
+          <div class="project-footer">
+            <div class="view-more">
+              <a href="{{ project.url }}" class="view-more-link">View More</a>
+            </div>
+            <div class="project-meta">
+              {% for i in project.icon %}
+                <i class="{{ i }}"></i>
+              {% endfor %}
+              {% if project.link_url %}
+                <span>|</span>
+              {% endif %}
+              <a href="{{ project.link_url }}" class="project-link-name">{{ project.link_name }}</a>
+            </div>
+          </div>
         </div>
-        <div class="project-meta">
-          {% for i in project.icon %}
-            <i class="{{ i }}"></i>
-          {% endfor %}
-          {% if project.link_url %}
-            <span>|</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <h2>Other Projects</h2>
+  <div class="other-projects-list">
+    {% for project in sorted_projects %}
+      {% unless project.featured %}
+        <hr class="tertiary-color">
+        <div class="project-item">
+          <a class="title" href="{{ project.url }}">{{ project.title }}</a>
+          {% if project.description %}
+            <p>{{ project.description }}</p>
           {% endif %}
-          <a href="{{ project.link_url }}" class="project-link-name">{{ project.link_name }}</a>
+          {% if project.icon %}
+            <div class="project-icons">
+              {% for i in project.icon %}
+                <i class="{{ i }}"></i>
+              {% endfor %}
+            </div>
+          {% endif %}
+          <a href="{{ project.url }}">View More</a>
         </div>
-      </div>
-    </div>
-  {% endfor %}
+      {% endunless %}
+    {% endfor %}
+    <hr class="tertiary-color">
+  </div>
 </div>
