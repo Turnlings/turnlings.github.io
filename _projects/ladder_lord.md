@@ -7,7 +7,7 @@ icon:
 layout: project
 link_name: itch.io
 link_url: https://turnlings.itch.io/ladder-lord
-order: 5
+order: 6
 ---
 <iframe frameborder="0" src="https://itch.io/embed/2909666?border_width=0&amp;link_color=0484d1" width="550" height="165">
   <a href="https://turnlings.itch.io/ladder-lord">Ladder Lord by Turnlings</a>
