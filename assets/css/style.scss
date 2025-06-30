@@ -36,10 +36,40 @@ nav {
 }
 
 .main-page {
-    padding: 10px;
+    padding: 10px 20px;
     margin: 0 auto;
     max-width: $base-page-width;
+
+    .about-section {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        gap: 40px;
+
+        h1 {
+            margin: 0
+        }
+        p {
+            margin: 0;
+        }
+
+        img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .about-links {
+            margin-top: auto;
+            display: flex; 
+            flex-direction: row; 
+            gap: 1em; 
+            align-items: center;
+        }
+    }
 }
+
 
 .project-item {
     margin-bottom: 10px;
@@ -51,15 +81,47 @@ nav {
     p {
         margin: 0;
     }
+    .project-icons-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0.5em;
+    }
+    .project-icons {
+        display: flex;
+        gap: 0.5em;
+    }
+    .view-more-link {
+        margin-left: auto;
+        text-decoration: none;
+        color: $primary-color;
+        font-weight: bold;
+        padding-left: 1em;
+    }
+    .view-more-link:hover {
+        text-decoration: underline;
+    }
+}
+
+.back-button {
+    font-weight: bold;
+    text-decoration: none; 
+    color: $primary-color; 
+    font-size: 1.1em; 
+    display: flex; 
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .project {
-    padding: 10px;
+    padding: 10px 20px;
     margin: 0 auto;
     max-width: $base-page-width;
     h1 {
         text-align: center;
-        margin-bottom: 0;
+        margin: 0;
     }
 
     .project-github-link {
@@ -80,6 +142,12 @@ nav {
         height: auto;
         display: block;
         margin: 0 auto;
+        border-radius: 8px;
+    }
+
+    iframe {
+        margin: 0 auto;
+        display: block;
     }
 
 }
@@ -127,6 +195,29 @@ blockquote {
     }
 }
 
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin: 2em 0 1em 0;
+
+    h2 {
+        margin: 0;
+        padding: 0 0.5em;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .section-rule {
+        flex: 1;
+        border: none;
+        border-top: 2px solid $tertiary-color;
+        margin: 0;
+    }
+}
+
 .tertiary-color {
     color: $tertiary-color;
 }
@@ -139,11 +230,33 @@ footer {
 
 // Old stuff
 
+
 .project-cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    justify-content: center;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .project-cards {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-cards {
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+    .project-card {
+        margin: 0 auto;
+    }
+    .main-page {
+        .about-section {
+            grid-template-columns: 1fr;
+        }
+    }
 }
 
 .project-card-link {

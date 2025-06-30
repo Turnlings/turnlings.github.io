@@ -3,6 +3,9 @@ layout: default
 title: {{ project.title }}
 ---
 <div class="project">
+    <a href="/" class="back-button">
+      < Back
+    </a>
     <h1>{{ page.title }}</h1>
     {% if page.link_url contains 'github.com' %}
       <div class="project-github-link">
@@ -11,6 +14,6 @@ title: {{ project.title }}
         </a>
       </div>
     {% endif %}
-    <p>{{ page.description }}</p>
+    <p style="text-align: center; font-style: italic;">{{ page.description }}</p>
     <div>{{ content }}</div>
 </div>

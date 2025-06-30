@@ -5,13 +5,33 @@ title: Portfolio
 ---
 
 <div class="main-page">
-  <h1>Ryan Turner</h1>
-  <p>Here are some projects
-    Icons from <a href="https://devicon.dev/">Devicon</a>.
+  <div class="about-section">
+    <div>
+      <img src="https://placehold.co/200x200?text=Placeholder" alt="Placeholder">
+    </div>
+    <div style="display: flex; flex-direction: column; height: 100%; position: relative;">
+      <h1>Ryan Turner</h1>
+      <p>Here are some projects
+        Icons from <a href="https://devicon.dev/">Devicon</a>.
+        <br><br>
+        There should be some yap here probably even though I hate it.
+      </p>
+      <div class="about-links">
+        <a href="https://github.com/Turnlings" target="_blank" rel="noopener" title="GitHub" style="display: flex; align-items: center; gap: 0.3em; text-decoration: none; color: inherit;">
+          <i class="devicon-github-original" style="font-size: 1.5em;"></i> GitHub
+        </a>
+        <a href="mailto:{{ site.email }}" title="Email" style="display: flex; align-items: center; gap: 0.3em; text-decoration: none; color: inherit;">
+          <i class="fa-solid fa-envelope" style="font-size: 1.5em;"></i> {{ site.email }}
+        </a>
+      </div>
+    </div>
+  </div>
 
-  </p>
-
-  <h2>Featured Projects</h2>
+  <div class="section-heading">
+    <hr class="section-rule">
+    <h2>Featured Projects</h2>
+    <hr class="section-rule">
+  </div>
   <div class="project-cards">
     {% assign sorted_projects = site.projects | sort: "order" %}
     {% for project in sorted_projects %}
@@ -45,27 +65,32 @@ title: Portfolio
     {% endfor %}
   </div>
 
-  <h2>Other Projects</h2>
+  <div class="section-heading">
+    <hr class="section-rule">
+    <h2>Other Projects</h2>
+    <hr class="section-rule">
+  </div>
   <div class="other-projects-list">
     {% for project in sorted_projects %}
       {% unless project.featured %}
-        <hr class="tertiary-color">
         <div class="project-item">
           <a class="title" href="{{ project.url }}">{{ project.title }}</a>
           {% if project.description %}
             <p>{{ project.description }}</p>
           {% endif %}
-          {% if project.icon %}
-            <div class="project-icons">
-              {% for i in project.icon %}
-                <i class="{{ i }}"></i>
-              {% endfor %}
-            </div>
-          {% endif %}
-          <a href="{{ project.url }}">View More</a>
+          <div class="project-icons-row">
+            {% if project.icon %}
+              <div class="project-icons">
+                {% for i in project.icon %}
+                  <i class="{{ i }}"></i>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <a href="{{ project.url }}" class="view-more-link">View More ></a>
+          </div>
         </div>
+        <hr class="tertiary-color">
       {% endunless %}
     {% endfor %}
-    <hr class="tertiary-color">
   </div>
 </div>

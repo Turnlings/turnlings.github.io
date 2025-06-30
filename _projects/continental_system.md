@@ -4,7 +4,6 @@ description: A Napoleonic strategy game for A-Level coursework.
 icon: devicon-java-plain
 layout: project
 link_name: Github
-link_url: https://github.com/Turnlings/continental-system
 image_url: /assets/images/continental_system/thumbnail.png
 order: 8
 ---
