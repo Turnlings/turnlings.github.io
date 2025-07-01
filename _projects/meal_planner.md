@@ -8,6 +8,7 @@ layout: project
 link_name: Github
 link_url: https://github.com/Turnlings/meal-planner
 order: 3
+year: 2025
 ---
 > Deployed at [https://meal-planner-fige.onrender.com](https://meal-planner-fige.onrender.com/)
 

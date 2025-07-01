@@ -7,9 +7,10 @@ icon:
 layout: project
 link_name: itch.io
 link_url: https://turnlings.itch.io/ladder-lord
-image_url: https://placehold.co/300x200?text=Placeholder
+image_url: /assets/images/ladder_lord/tutorial.png
 featured: true
 order: 6
+year: 2024
 ---
 
 It has become a bit of a tradition for me to enter the GMTK game jam each year, and this year I wanted to learn from my previous experiences to build something that would see more success. That entailed reducing the scope and focusing more on quality, both with the mechanics and the presentation.  

@@ -49,8 +49,13 @@ nav {
         h1 {
             margin: 0
         }
-        p {
+
+        #role {
             margin: 0;
+            font-style: italic;
+        }
+        #bio {
+            margin-top: 10px;
         }
 
         img {
@@ -58,6 +63,8 @@ nav {
             max-width: 300px;
             height: auto;
             border-radius: 8px;
+            display: block;
+            margin: 0 auto;
         }
 
         .about-links {
@@ -85,7 +92,7 @@ nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 0.5em;
+        margin: 0;
     }
     .project-icons {
         display: flex;
@@ -142,7 +149,7 @@ nav {
         height: auto;
         display: block;
         margin: 0 auto;
-        border-radius: 8px;
+        border-radius: 6px;
     }
 
     iframe {
@@ -170,6 +177,10 @@ nav {
         margin: 0;
         border: 1px solid $tertiary-color;
         border-radius: 4px;
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: #f6f6f6
     }
 
     button {
@@ -267,42 +278,37 @@ footer {
     max-width: 350px;
 }
 
-.project-card-link h3,
-.project-card-link p,
-.project-card-link i {
-    color: black;
-    margin: 0;
-}
-
-.project-card-link:hover h3,
-.project-card-link:hover p {
-    color: black;
-}
-
-.project-card-link:hover {
-    text-decoration: none;
-    color: black;
-}
-
 .project-card {
-    border: 1px solid $tertiary-color;
+    border: 2px solid $tertiary-color;
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     background-color: $secondary-color;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     .content {
-        margin: 0 12px;
-        h3 {
+        margin: 0 8px;
+        h3.project-title {
             font-weight: bold;
-            margin: 12px 0 0px;
-            display: inline;
+            margin: 8px 0 4px 0;
+            display: block;
         }
 
         p {
-            margin-bottom: auto;
+            margin-top: 0;
+            margin-bottom: 4px;
         }
+    }
+
+    .project-footer {
+        margin: auto 8px 8px 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
     }
 }
 
@@ -314,12 +320,12 @@ footer {
 .project-image {
     max-width: 100%;
     height: auto;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
 .project-footer {
-    margin: auto 16px 16px 16px;
+    margin: auto 8px 8px 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -330,4 +336,26 @@ footer {
     display: flex;
     align-items: center;
     gap: 0.5em;
+}
+
+.project-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.project-title-row .title {
+    flex: 1 1 auto;
+    font-size: 1.5em;
+    color: $primary-color;
+    text-decoration: none;
+}
+
+.project-year {
+    font-style: italic;
+    flex-shrink: 0;
+    font-size: 1em;
+    margin-left: 1em;
+    white-space: nowrap;
 }

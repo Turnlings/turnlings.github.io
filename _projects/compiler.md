@@ -6,6 +6,7 @@ layout: project
 link_name: Github
 link_url: https://github.com/Turnlings/quokka-compiler
 order: 2
+year: 2025
 ---
 
 After learning the language through *C Programming A Modern Approach by K.N.King* I wanted to embark on a larger project to test my knowledge. I wanted a nice and formal project that would let me better understand a core part of computing and in the end I settled on building my own compiler.  

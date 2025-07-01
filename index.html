@@ -7,15 +7,12 @@ title: Portfolio
 <div class="main-page">
   <div class="about-section">
     <div>
-      <img src="https://placehold.co/200x200?text=Placeholder" alt="Placeholder">
+      <img src="https://placehold.co/200x200?text=Professional_Photo_Here" alt="Placeholder">
     </div>
     <div style="display: flex; flex-direction: column; height: 100%; position: relative;">
       <h1>Ryan Turner</h1>
-      <p>Here are some projects
-        Icons from <a href="https://devicon.dev/">Devicon</a>.
-        <br><br>
-        There should be some yap here probably even though I hate it.
-      </p>
+      <p id="role">Student Software Engineer</p>
+      <p id="bio">Computer Science student with hands-on experience in full-stack development, team projects, and working with real clients. Curious about new technologies and focused on building dependable, maintainable, and genuinely useful software.</p>
       <div class="about-links">
         <a href="https://github.com/Turnlings" target="_blank" rel="noopener" title="GitHub" style="display: flex; align-items: center; gap: 0.3em; text-decoration: none; color: inherit;">
           <i class="devicon-github-original" style="font-size: 1.5em;"></i> GitHub
@@ -74,7 +71,12 @@ title: Portfolio
     {% for project in sorted_projects %}
       {% unless project.featured %}
         <div class="project-item">
-          <a class="title" href="{{ project.url }}">{{ project.title }}</a>
+          <div class="project-title-row">
+            <a class="title" href="{{ project.url }}">{{ project.title }}</a>
+            {% if project.year %}
+              <span class="project-year">{{ project.year }}</span>
+            {% endif %}
+          </div>
           {% if project.description %}
             <p>{{ project.description }}</p>
           {% endif %}
