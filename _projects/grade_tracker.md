@@ -10,7 +10,7 @@ link_url: https://github.com/Turnlings/grade-tracker
 image_url: https://placehold.co/640x360?text=WIP
 featured: true
 order: 1
-year: 2025-
+year: 2025
 ---
 A web-based application designed to help students monitor their academic progress across multiple modules. Users can input grades, calculate weighted averages, and visualize performance trends throughout the year.
 

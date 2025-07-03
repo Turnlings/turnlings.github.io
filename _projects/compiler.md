@@ -1,5 +1,5 @@
 ---
-title: Quokka Compiler
+title: Toy Language Compiler
 description: (Ongoing) A compiler for my own language.
 icon: devicon-c-plain
 layout: project
