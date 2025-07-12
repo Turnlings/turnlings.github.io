@@ -69,13 +69,10 @@ title: Portfolio
   </div>
   <div class="other-projects-list">
     {% for project in sorted_projects %}
-      {% unless project.featured %}
+      {% unless project.featured or project.hide %}
         <div class="project-item">
           <div class="project-title-row">
             <a class="title" href="{{ project.url }}">{{ project.title }}</a>
-            {% if project.year %}
-              <span class="project-year">{{ project.year }}</span>
-            {% endif %}
           </div>
           {% if project.description %}
             <p>{{ project.description }}</p>

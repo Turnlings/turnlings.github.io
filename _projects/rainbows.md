@@ -20,7 +20,7 @@ I personally worked across the system, from design, to implementation, to testin
 - Git
 
 ## Coursework Feedback
-Awarded 90% in my favourite module of the year, with praise from our client:
+Due to teamwork multipliers I achieved a perfect score of **100%** in the coursework component, with praise from our client:
 > "The system you have developed is excellent and surpassed my expectations. Well done!"
 
 ## Images
