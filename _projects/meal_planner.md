@@ -16,6 +16,12 @@ This project was atypical in that I went into it intending to see how effective 
 
 ## Technologies
 - Ruby on Rails
+- Github Copilot
+
+## Images
+![Login](/assets/images/meal_planner/login.png)
+![Dashboard](/assets/images/meal_planner/dashboard.png)
+![Filtered](/assets/images/meal_planner/filtered.png)
 
 ## Initial Prompt
 

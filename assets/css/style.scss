@@ -1,13 +1,16 @@
 ---
 ---
 .empty {} // Stops claiming theres an error due to my setup
-$primary-color: #242424;
-$secondary-color: #f0f0f0;
-$tertiary-color: #d5d5d5;
-$base-page-width: 800px;
+
+// Partials have to be stored in _sass/
+
+@import 'variables';
+@import 'contact-me';
+@import 'project';
+
 
 html {
-    font-size: 16px;;
+    font-size: 16px;
 }
 
 body {
@@ -37,6 +40,12 @@ nav {
         padding: 5px 15px;
         display: inline-block;
     }
+}
+
+@mixin centred-columns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main-page {
@@ -81,7 +90,6 @@ nav {
     }
 }
 
-
 .project-item {
     margin-bottom: 10px;
     .title {
@@ -93,9 +101,7 @@ nav {
         margin: 0;
     }
     .project-icons-row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include centred-columns;
         margin: 0;
     }
     .project-icons {
@@ -123,79 +129,6 @@ nav {
 
     &:hover {
         text-decoration: underline;
-    }
-}
-
-.project {
-    padding: 10px 20px;
-    margin: 0 auto;
-    max-width: $base-page-width;
-    h1 {
-        text-align: center;
-        margin: 0;
-    }
-
-    .project-github-link {
-        display: block;
-        text-align: center;
-        a {
-            color: $primary-color;
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        border-radius: 6px;
-    }
-
-    iframe {
-        margin: 0 auto;
-        display: block;
-    }
-
-}
-
-.contact-me {
-    margin: 0 auto;
-    text-align: center;
-    max-width: 600px;
-
-    a {
-        width: 40px;
-        color: $primary-color;
-        text-decoration: none;
-    }
-
-    #email, #message {
-        width: 100%;
-        max-width: 580px;
-        padding: 10px;
-        margin: 0;
-        border: 1px solid $tertiary-color;
-        border-radius: 4px;
-        font-family: inherit;
-        font-size: inherit;
-        color: inherit;
-        background-color: #f6f6f6
-    }
-
-    button {
-        font-size: 1rem;
-        width: 100%;
-        border-radius: 4px;
-        background-color: $primary-color;
-        color: $secondary-color;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
     }
 }
 
@@ -241,46 +174,11 @@ footer {
     background-color: $tertiary-color;
 }
 
-
-
-// Old stuff
-
-
 .project-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
-}
-
-@media (max-width: 800px) {
-    .project-cards {
-        gap: 5px;
-    }
-}
-
-@media (max-width: 600px) {
-    .project-cards {
-        gap: 20px;
-        grid-template-columns: 1fr;
-    }
-    .project-card {
-        margin: 0 auto;
-    }
-    .main-page {
-        .about-section {
-            grid-template-columns: 1fr;
-        }
-    }
-    .contact-me {
-        margin: 0 10px;
-        max-width: 100vw;
-        #email, #message {
-            width: 100%;
-            max-width: 100vw;
-            box-sizing: border-box;
-        }
-    }
 }
 
 .project-card-link {
@@ -319,9 +217,7 @@ footer {
 
     .project-footer {
         margin: auto 8px 8px 8px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include centred-columns;
         margin-top: auto;
 
         a {
@@ -334,25 +230,18 @@ footer {
             }
         }
     }
-}
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
+    .project-image {
+        max-width: 100%;
+        height: auto;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
 
-.project-image {
-    max-width: 100%;
-    height: auto;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-}
-
-.project-footer {
-    margin: auto 8px 8px 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
 }
 
 .project-meta {
@@ -363,19 +252,17 @@ footer {
 }
 
 .project-title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include centred-columns;
     gap: 1em;
-}
 
-.project-title-row .title {
-    flex: 1 1 auto;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: $primary-color;
-    text-decoration: none;
-    margin-bottom: 4px;
+    .title {
+        flex: 1 1 auto;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $primary-color;
+        text-decoration: none;
+        margin-bottom: 4px;
+    }
 }
 
 .project-year {
@@ -385,4 +272,34 @@ footer {
     font-size: 1rem;
     margin-left: 1rem;
     white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+    .project-cards {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-cards {
+        gap: 20px;
+        grid-template-columns: 1fr;
+    }
+    .project-card {
+        margin: 0 auto;
+    }
+    .main-page {
+        .about-section {
+            grid-template-columns: 1fr;
+        }
+    }
+    .contact-me {
+        margin: 0 10px;
+        max-width: 100vw;
+        #email, #message {
+            width: 100%;
+            max-width: 100vw;
+            box-sizing: border-box;
+        }
+    }
 }
