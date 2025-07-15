@@ -20,7 +20,8 @@ For more information read the [Devpost](https://devpost.com/software/ciphershare
 - Auth0
 
 ## Images
-### Main Page
 ![Main page](/assets/images/ciphershare/examples.png)
-### Link to send
+*Users can enter emails with which they want to share the file*  
+
 ![Link](/assets/images/ciphershare/link.png)
+*Sharing this link allows the reciever to download the file if their email was included*

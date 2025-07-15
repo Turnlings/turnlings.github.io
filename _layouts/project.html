@@ -3,10 +3,12 @@ layout: default
 title: {{ project.title }}
 ---
 <div class="project">
-    <a href="/" class="back-button">
-      < Back
-    </a>
-    <h1>{{ page.title }}</h1>
+    <div class="header-container">
+      <a href="/" class="back-button">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <h1>{{ page.title }}</h1>
+    </div>
     {% if page.link_url contains 'github.com' %}
       <div class="project-github-link">
         <a href="{{ page.link_url }}" target="_blank" rel="noopener">

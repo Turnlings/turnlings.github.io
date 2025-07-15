@@ -1,5 +1,5 @@
 ---
-title: Rainbow Badge System
+title: Rainbow Badges
 description: A badge management system for local rainbows leaders.
 icon: 
     - devicon-ruby-plain
@@ -24,7 +24,8 @@ Due to teamwork multipliers I achieved a perfect score of **100%** in the course
 > "The system you have developed is excellent and surpassed my expectations. Well done!"
 
 ## Images
-### Badge management
 ![Badge Management](/assets/images/rainbows/badges.png)
-### Rainbow profile
+*Badge management*  
+
 ![Rainbow Profile](/assets/images/rainbows/profile.png)
+*Rainbow profile*  

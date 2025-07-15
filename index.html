@@ -73,20 +73,20 @@ title: Portfolio
         <div class="project-item">
           <div class="project-title-row">
             <a class="title" href="{{ project.url }}">{{ project.title }}</a>
+            <div class="project-icons-row">
+              {% if project.icon %}
+                <div class="project-icons">
+                  {% for i in project.icon %}
+                    <i class="{{ i }}"></i>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
           </div>
           {% if project.description %}
             <p>{{ project.description }}</p>
           {% endif %}
-          <div class="project-icons-row">
-            {% if project.icon %}
-              <div class="project-icons">
-                {% for i in project.icon %}
-                  <i class="{{ i }}"></i>
-                {% endfor %}
-              </div>
-            {% endif %}
-            <a href="{{ project.url }}" class="view-more-link">View More ></a>
-          </div>
+          <a href="{{ project.url }}" class="view-more-link">View More</a>
         </div>
         <hr class="tertiary-color">
       {% endunless %}

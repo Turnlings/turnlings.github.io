@@ -4,6 +4,25 @@
     padding: 10px 20px;
     margin: 0 auto;
     max-width: $base-page-width;
+
+    .header-container {
+        margin-top: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .back-button {
+        font-size: 1.5rem;
+        position: absolute;
+        left: 0;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
     h1 {
         text-align: center;
         margin: 0;
@@ -26,7 +45,7 @@
         max-width: 100%;
         height: auto;
         display: block;
-        margin: 0 auto;
+        margin: 0 auto 8px;
         border-radius: 6px;
     }
 
