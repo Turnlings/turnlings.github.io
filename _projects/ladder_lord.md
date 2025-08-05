@@ -8,7 +8,6 @@ layout: project
 link_name: itch.io
 link_url: https://turnlings.itch.io/ladder-lord
 image_url: /assets/images/ladder_lord/tutorial.png
-featured: true
 order: 6
 year: 2024
 ---
@@ -17,7 +16,7 @@ It has become a bit of a tradition for me to enter the GMTK game jam each year, 
 
 I built this game in 4 days (with a little extra polish added based on player feedback after submission) and it was good practice not just in the relevant technologies but also in time management.
 
-Since then I have sporadically updated the game with mostly QOL features. As I gain inspiration, this is my go-to game to update.
+Since then I have sporadically updated the game with mostly QOL features. As I gained inspiration, this was my go-to game to update for about a year.
 
 ## Technologies
 - Unity
