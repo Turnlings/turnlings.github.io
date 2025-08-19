@@ -1,12 +1,13 @@
 ---
-title: Module Mate
+title: ModuleMate
 description: (Ongoing) An assessment and time spent tracker.
 icon: 
     - devicon-ruby-plain
     - devicon-rails-plain
 layout: project
-link_name: Github
-link_url: https://github.com/Turnlings/grade-tracker
+link_name: modulemate.app
+link_url: https://modulemate.app
+github_url: https://github.com/Turnlings/grade-tracker
 image_url: /assets/images/grade_tracker/dashboard.png
 featured: true
 order: 1

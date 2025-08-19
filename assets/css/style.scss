@@ -201,6 +201,7 @@ footer {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 
     .content {
         margin: 0 8px;
@@ -247,10 +248,15 @@ footer {
 }
 
 .project-meta {
-    float: right;
     display: flex;
     align-items: center;
     gap: 0.5em;
+    justify-content: flex-end;
+
+    a {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .project-title-row {

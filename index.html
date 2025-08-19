@@ -51,10 +51,18 @@ title: Portfolio
               {% for i in project.icon %}
                 <i class="{{ i }}"></i>
               {% endfor %}
-              {% if project.link_url %}
+              {% if project.link_url or project.github_url %}
                 <span>|</span>
+                {% if  project.github_url %}
+                  <div class="project-link">
+                    <a href="{{ project.github_url }}" target="_blank" rel="noopener">
+                      <i class="devicon-github-original"></i>
+                    </a>
+                  </div>
+                {% else %}
+                  <a href="{{ project.link_url }}" class="project-link-name">{{ project.link_name }}</a>
+                {% endif %}
               {% endif %}
-              <a href="{{ project.link_url }}" class="project-link-name">{{ project.link_name }}</a>
             </div>
           </div>
         </div>

@@ -27,8 +27,13 @@
         text-align: center;
         margin: 0;
     }
-
-    .project-github-link {
+    .project-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+        
+    .project-link {
         display: block;
         text-align: center;
         a {

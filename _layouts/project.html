@@ -9,13 +9,22 @@ title: {{ project.title }}
       </a>
       <h1>{{ page.title }}</h1>
     </div>
-    {% if page.link_url contains 'github.com' %}
-      <div class="project-github-link">
-        <a href="{{ page.link_url }}" target="_blank" rel="noopener">
-          <i class="devicon-github-original"></i> GitHub
-        </a>
-      </div>
-    {% endif %}
+    <div class="project-links">
+      {% if page.github_url %}
+        <div class="project-link">
+          <a href="{{ page.github_url }}" target="_blank" rel="noopener">
+            <i class="devicon-github-original"></i> GitHub
+          </a>
+        </div>
+      {% endif %}
+      {% if page.link_url %}
+        <div class="project-link">
+          <a href="{{ page.link_url }}" target="_blank" rel="noopener">
+            <i class="fa-solid fa-link"></i> {{ page.link_name }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
     <p style="text-align: center; font-style: italic;">{{ page.description }}</p>
     <div>{{ content }}</div>
 </div>

@@ -3,8 +3,7 @@ title: Ciphershare
 description: Secure file transfer for HackSheffield9.
 icon: devicon-go-original-wordmark
 layout: project
-link_name: Github
-link_url: https://github.com/SecretSheppy/ciphershare
+github_url: https://github.com/SecretSheppy/ciphershare
 image_url: /assets/images/ciphershare/thumbnail.png
 order: 5
 year: 2024

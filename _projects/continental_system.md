@@ -3,7 +3,6 @@ title: The Continental System
 description: A Napoleonic strategy game for A-Level coursework.
 icon: devicon-java-plain
 layout: project
-link_name: Github
 image_url: /assets/images/continental_system/thumbnail.png
 order: 8
 year: 2022-2023

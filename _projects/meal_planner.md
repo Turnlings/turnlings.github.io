@@ -10,9 +10,7 @@ layout: project
 order: 3
 year: 2025
 ---
-> Hosting site requires manual database reset each month, so there is a high chance that it is unavailable.  
-
-Demo at [https://meal-planner-fige.onrender.com](https://meal-planner-fige.onrender.com/)
+> Demo currently unavailable after reaching end of free plan on hosting site.
 
 This project was atypical in that I went into it intending to see how effective *"vibe coding"* really is. I found that it was very useful at building an MVP, I had a working product in a matter of hours, but as complexity grew it ran into more and more issues. This is where I found it very useful that I had just finished a group project in Rails: [The Rainbow Badge Manager](./rainbows.html) and was currently working on my [Grade Tracker](./grade_tracker.html) over the summer. Having the experience in the technology allowed me to better guide the AI agent, and also make manual changes when required.
 
