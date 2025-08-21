@@ -188,7 +188,6 @@ footer {
     color: $text;
     display: flex;
     flex-direction: column;
-    max-width: 350px;
 }
 
 .project-card {
@@ -235,7 +234,7 @@ footer {
     }
 
     .project-image {
-        max-width: 100%;
+        width: 100%;
         height: auto;
         border-top-left-radius: 6px;
         border-top-right-radius: 6px;
