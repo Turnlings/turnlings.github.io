@@ -25,6 +25,16 @@ title: {{ project.title }}
         </div>
       {% endif %}
     </div>
+    <div class="tech-stack">
+      <ul class="tech-chips">
+        {% for i in page.tech %}
+          <li class="tech-chip">
+            <i class="{{ i.icon }}"></i>
+            <span>{{ i.name }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
     <p style="text-align: center; font-style: italic;">{{ page.description }}</p>
     <div>{{ content }}</div>
 </div>

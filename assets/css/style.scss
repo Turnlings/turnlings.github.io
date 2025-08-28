@@ -8,6 +8,8 @@
 @import 'contact-me';
 @import 'project';
 
+@import 'components/chips';
+
 
 html {
     font-size: 16px;
@@ -221,6 +223,10 @@ footer {
         margin: auto 8px 8px 8px;
         @include centred-columns;
         margin-top: auto;
+        align-items: center;
+        gap: 0.5em;
+
+        overflow: hidden;
 
         a {
             color: $text;
@@ -229,6 +235,29 @@ footer {
 
             &:hover {
                 text-decoration: underline;
+            }
+        }
+
+        .view-more {
+            flex: 0 0 auto;
+        }
+        .view-more-link {
+            flex-shrink: 0;
+        }
+
+        .chip-container {
+            flex: 1 1 auto;
+            justify-content: flex-end;
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .project-link {
+            flex: 0 0 auto;
+            align-items: center;
+            a {
+                display: flex;
+                align-items: center;
             }
         }
     }
@@ -269,6 +298,9 @@ footer {
         font-weight: bold;
         color: $text-bold;
         text-decoration: none;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 

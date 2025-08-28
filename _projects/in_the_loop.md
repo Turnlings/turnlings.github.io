@@ -1,9 +1,6 @@
 ---
 title: In The Loop
 description: A GMTK2025 Game Jam submission.
-icon: 
-  - devicon-csharp-plain
-  - devicon-unity-plain
 layout: project
 link_name: itch.io
 link_url: https://turnlings.itch.io/in-the-loop
@@ -11,13 +8,18 @@ image_url: /assets/images/in_the_loop/standing.png
 featured: true
 order: 6
 year: 2025
+tech:
+  - icon: devicon-csharp-plain
+    name: C#
+    priority: true
+  - icon: devicon-unity-plain
+    name: Unity
+    priority: true
+  - icon: devicon-git-plain
+    name: Git
 ---
 
 Built in 4 days as part of a team of 4, this 2D top-down spy game is my third entry to the GMTK game jam. You must search for scraps of paper and solve puzzles to unravel the mystery. You can play the latest version on itch.io [here](https://turnlings.itch.io/in-the-loop).
-
-## Technologies
-- Unity
-- C#
 
 ## Images
 ![Standing](/assets/images/in_the_loop/standing.png)

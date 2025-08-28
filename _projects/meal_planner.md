@@ -1,14 +1,18 @@
 ---
 title: Meal Planner
 description: A web app to help plan meals. Built using Github Copilot.
-icon: 
-    - devicon-ruby-plain
-    - devicon-rails-plain
 layout: project
 # link_name: Github
 # link_url: https://github.com/Turnlings/meal-planner
 order: 3
 year: 2025
+tech:
+  - icon: devicon-ruby-plain
+    name: Ruby
+    priority: true
+  - icon: devicon-rails-plain
+    name: Rails
+    priority: true
 ---
 > Demo currently unavailable after reaching end of free plan on hosting site.
 

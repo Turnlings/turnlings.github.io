@@ -1,0 +1,42 @@
+.tech-chip {
+  height: 1.2em;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 1;
+  min-width: 0; 
+
+  span {
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 1em;
+    transition: max-width 0.3s ease, opacity 0.2s ease;
+  }
+
+  &:hover {
+    background-color: $primary-color;
+    color: $secondary-color;
+    border-radius: 1em;
+    cursor: default;
+    gap: 0.3em;
+    padding: 0 0.4em;
+
+    span {
+      max-width: 150px;
+      opacity: 1;
+    }
+  }
+}
+
+.tech-chips {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  flex-wrap: nowrap; 
+  margin: 0;
+  padding: 0;
+  gap: 0.5em;
+}

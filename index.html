@@ -47,23 +47,27 @@ title: Portfolio
             <div class="view-more">
               <a href="{{ project.url }}" class="view-more-link">View More</a>
             </div>
-            <div class="project-meta">
-              {% for i in project.icon %}
-                <i class="{{ i }}"></i>
+            <ul class="tech-chips chip-container">
+              {% for i in project.tech %}
+                {% if i.priority %}
+                  <li class="tech-chip">
+                    <i class="{{ i.icon }}"></i>
+                    <span>{{ i.name }}</span>
+                  </li>
+                {% endif %}
               {% endfor %}
-              {% if project.link_url or project.github_url %}
-                <span>|</span>
-                {% if  project.github_url %}
-                  <div class="project-link">
-                    <a href="{{ project.github_url }}" target="_blank" rel="noopener">
-                      <i class="devicon-github-original"></i>
-                    </a>
-                  </div>
+            </ul>
+            {% if project.link_url or project.github_url %}
+              <div class="project-link">
+                {% if project.github_url %}
+                  <a href="{{ project.github_url }}" target="_blank" rel="noopener">
+                    <i class="devicon-github-original"></i>
+                  </a>
                 {% else %}
                   <a href="{{ project.link_url }}" class="project-link-name">{{ project.link_name }}</a>
                 {% endif %}
-              {% endif %}
-            </div>
+              </div>
+            {% endif %}
           </div>
         </div>
       {% endif %}
@@ -82,13 +86,16 @@ title: Portfolio
           <div class="project-title-row">
             <a class="title" href="{{ project.url }}">{{ project.title }}</a>
             <div class="project-icons-row">
-              {% if project.icon %}
-                <div class="project-icons">
-                  {% for i in project.icon %}
-                    <i class="{{ i }}"></i>
-                  {% endfor %}
-                </div>
-              {% endif %}
+              <ul class="tech-chips">
+                {% for i in project.tech %}
+                  {% if i.priority %}
+                    <li class="tech-chip">
+                      <i class="{{ i.icon }}"></i>
+                      <span>{{ i.name }}</span>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
             </div>
           </div>
           {% if project.description %}
