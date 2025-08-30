@@ -1,6 +1,6 @@
 ---
 title: ModuleMate
-description: (Ongoing) An assessment and time spent tracker.
+description: Track study time, manage upcoming exams, calculate final grades.
 layout: project
 link_name: modulemate.app
 link_url: https://modulemate.app

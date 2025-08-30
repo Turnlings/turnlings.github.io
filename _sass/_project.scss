@@ -27,10 +27,19 @@
         text-align: center;
         margin: 0;
     }
+
+    .description {
+        text-align: center; 
+        font-style: italic;
+        margin-top: 0;
+        margin-bottom: 0.5em;
+    }
+
     .project-links {
         display: flex;
         justify-content: center;
         gap: 1rem;
+        margin-bottom: 1rem;
     }
         
     .project-link {
@@ -49,7 +58,6 @@
     .tech-stack {
         display: flex;
         justify-content: center;
-        margin-top: 1rem;
         font-size: 1.2rem;
     }
 
