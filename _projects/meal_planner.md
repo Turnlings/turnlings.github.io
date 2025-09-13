@@ -13,6 +13,7 @@ tech:
   - icon: devicon-rails-plain
     name: Rails
     priority: true
+hide: true
 ---
 > Demo currently unavailable after reaching end of free plan on hosting site.
 

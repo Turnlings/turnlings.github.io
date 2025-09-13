@@ -16,3 +16,8 @@ tech:
 As this was a piece of coursework we faced heavy restrictions on the use of external libraries and frameworks, because of this I used LibGDX purely for drawing the to screen and getting user inputs. This meant that everything from graph traversal to the UI system were all custom built.
 
 I also had to work on systems to bring real geographical data into the game.
+
+## Features
+- Troop navigation across a realistic map of Europe.
+- Economy system to earn money and buy troops.
+- AI countries to fight against and engage in diplomacy.

@@ -32,6 +32,13 @@ I personally worked across the system, from design, to implementation, to testin
 Due to teamwork multipliers I achieved a perfect score of **100%** in the coursework component, with praise from our client:
 > "The system you have developed is excellent and surpassed my expectations. Well done!"
 
+## Features
+- Create and edit badges, assigning them to themes.
+- Mark activities as complete and automatically process badge completion.
+- Notification system for leaders to track badges to hand out.
+- Dynamic page colours to engage users and improve navigation clarity.
+- Link Rainbow accounts to parents so they can track progress.
+
 ## Images
 ![Badge Management](/assets/images/rainbows/badges.png)
 *Badge management*  

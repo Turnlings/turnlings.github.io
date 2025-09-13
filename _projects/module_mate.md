@@ -33,6 +33,13 @@ A web-based application designed to help students monitor their academic progres
 
 This is my replacement for a series of spreadsheets I used to use that got too clunky.
 
+## Features
+- Track study time with Quicklog for each task.
+- Manage upcoming exams sorted by module, semester and year.
+- Calculate final grades automatically based on scores and weighted averages.
+- Visualize performance trends across modules over the year.
+- Share a link or code for your semester template with other users.
+
 ## Images
 ![Dashboard](/assets/images/grade_tracker/dashboard.png)
 *The dashboard presents the user with all their collated stats, and easy navigation to find more details.*

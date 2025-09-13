@@ -21,6 +21,11 @@ tech:
 
 Built in 4 days as part of a team of 4, this 2D top-down spy game is my third entry to the GMTK game jam. You must search for scraps of paper and solve puzzles to unravel the mystery. You can play the latest version on itch.io [here](https://turnlings.itch.io/in-the-loop).
 
+## Features
+- Explore with limited visibility: Player viewing radius adds tension and strategy.
+- Interact with puzzles: Enter safe codes to collect extra keys.
+- Debug-friendly AI visualization: Developer tool showing AI navigation paths in real-time.
+
 ## Images
 ![Standing](/assets/images/in_the_loop/standing.png)
 *The player has to search the map, keys let them access more areas.*
