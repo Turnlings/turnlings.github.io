@@ -1,5 +1,3 @@
-@import 'variables';
-
 .project {
     padding: 10px 20px;
     margin: 0 auto;
@@ -84,5 +82,28 @@
             margin-top: 0.5rem;
             padding-left: 1.5rem;
         }
+    }
+}
+
+.back-button {
+    font-weight: bold;
+    text-decoration: none; 
+    color: $text; 
+    font-size: 1rem; 
+    display: flex; 
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+blockquote {
+    border-left: 4px solid $tertiary-color;
+    padding-left: 1em;
+    margin: 1em 0;
+    font-style: italic;
+
+    ul {
+        padding-left: 20px;
     }
 }
