@@ -1,4 +1,5 @@
 .tech-chip {
+  color: $text-muted;
   height: 1.2em;
   list-style: none;
   display: inline-flex;
@@ -17,15 +18,16 @@
   }
 
   &:hover {
-    background-color: $primary-color;
-    color: $secondary-color;
+    background-color: transparentize($brand, 0.5);
+    border: 1px solid $brand;
+    color: $text;
     border-radius: 1em;
     cursor: default;
     gap: 0.3em;
     padding: 0 0.4em;
 
     span {
-      max-width: 150px;
+      max-width: 300px;
       opacity: 1;
     }
   }

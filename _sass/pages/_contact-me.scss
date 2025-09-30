@@ -33,7 +33,7 @@
         cursor: pointer;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: $breakpoint-md) {
         margin: 0 10px;
         max-width: 100vw;
         #email, #message {

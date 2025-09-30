@@ -1,7 +1,7 @@
 .project {
     padding: 10px 20px;
     margin: 0 auto;
-    max-width: $base-page-width;
+    max-width: $breakpoint-lg;
 
     .header-container {
         margin-top: 10px;
@@ -48,7 +48,7 @@
         display: block;
         text-align: center;
         a {
-            color: $primary-color;
+            color: $text-muted;
             text-decoration: none;
 
             &:hover {
