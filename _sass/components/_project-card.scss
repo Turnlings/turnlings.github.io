@@ -1,7 +1,7 @@
 .project-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 1rem;
     width: 100%;
 }
 
@@ -14,7 +14,7 @@
 
 .project-card {
     border: 2px solid $highlight;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -25,26 +25,26 @@
     width: 100%;
 
     .content {
-        margin: 0 8px;
+        margin: 0 0.5rem;
         h3.project-title {
             font-size: 1.2rem;
             font-weight: bold;
-            margin: 12px 0 8px 0;
+            margin: 1rem 0 0.5rem 0;
             display: block;
         }
 
         p {
             margin-top: 0;
-            margin-bottom: 4px;
+            margin-bottom: 0.5rem;
         }
     }
 
     .project-footer {
-        margin: auto 8px 8px 8px;
+        margin: auto 0.5rem 0.5rem 0.5rem;
         @include centred-columns;
         margin-top: auto;
         align-items: center;
-        gap: 0.5em;
+        gap: 0.5rem;
 
         overflow: hidden;
 
@@ -85,8 +85,8 @@
     .project-image {
         width: 100%;
         height: auto;
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
+        border-top-left-radius: calc(0.5rem - 2px);
+        border-top-right-radius: calc(0.5rem - 2px);
     }
 
     &:hover {
@@ -98,7 +98,7 @@
 .project-meta {
     display: flex;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.5rem;
     justify-content: flex-end;
 
     a {
@@ -109,13 +109,13 @@
 
 @media (max-width: $breakpoint-lg) {
     .project-cards {
-        gap: 5px;
+        gap: 0.5rem;
     }
 }
 
 @media (max-width: $breakpoint-md) {
     .project-cards {
-        gap: 20px;
+        gap: 1rem;
         grid-template-columns: 1fr;
     }
     .project-card {

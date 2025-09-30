@@ -1,10 +1,10 @@
 .main-page {
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     margin: 0 auto;
     max-width: $breakpoint-lg;
 
     .about-section {
-        margin-top: 20px;
+        margin-top: 1rem;
         // Uncomment if adding back picture
         // display: grid;
         // grid-template-columns: 2fr 5fr;
@@ -21,7 +21,7 @@
             color: $text-muted
         }
         #bio {
-            margin-top: 10px;
+            margin-top: 0.5rem;
             line-height: 1.5rem;
         }
 
@@ -29,7 +29,7 @@
             width: 100%;
             max-width: 300px;
             height: auto;
-            border-radius: 8px;
+            border-radius: 0.5rem;
             display: block;
             margin: 0 auto;
         }
@@ -58,7 +58,7 @@
 }
 
 .project-item {
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
     .title {
         font-size: 1.5rem;
         color: $text-bold;

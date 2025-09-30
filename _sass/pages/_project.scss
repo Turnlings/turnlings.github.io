@@ -1,10 +1,10 @@
 .project {
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     margin: 0 auto;
     max-width: $breakpoint-lg;
 
     .header-container {
-        margin-top: 10px;
+        margin-top: 0.5rem;
         position: relative;
         display: flex;
         align-items: center;
@@ -68,8 +68,8 @@
         max-width: 100%;
         height: auto;
         display: block;
-        margin: 0 auto 8px;
-        border-radius: 6px;
+        margin: 0 auto 0.5rem;
+        border-radius: 0.5rem;
     }
 
     iframe {
@@ -104,6 +104,6 @@ blockquote {
     font-style: italic;
 
     ul {
-        padding-left: 20px;
+        padding-left: 1rem;
     }
 }
