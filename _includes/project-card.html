@@ -1,37 +1,43 @@
 <div class="project-card">
-  <div>
+  <a href="{{ project.url }}" class="project-card-link">
+    <img src="{{ project.image_url }}" alt="{{ project.title }} image" class="project-image">
+  </a>
+
+  <div class="content-container">
     <a href="{{ project.url }}" class="project-card-link">
-      <img src="{{ project.image_url }}" alt="{{ project.title }} image" class="project-image">
       <div class="content">
         <h3 class="project-title">{{ project.title }}</h3>
         <p>{{ project.description }}</p>
       </div>
     </a>
-  </div>
-  <div class="project-footer">
-    <div class="view-more">
-      <a href="{{ project.url }}" class="view-more-link">View More</a>
-    </div>
-    <ul class="tech-chips chip-container">
-      {% for i in project.tech %}
-        {% if i.priority %}
-          <li class="tech-chip">
-            <i class="{{ i.icon }}"></i>
-            <span>{{ i.name }}</span>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-    {% if project.link_url or project.github_url %}
-      <div class="project-link">
-        {% if project.github_url %}
-          <a href="{{ project.github_url }}" target="_blank" rel="noopener">
-            <i class="devicon-github-original"></i>
-          </a>
-        {% else %}
-          <a href="{{ project.link_url }}" class="project-link-name">{{ project.link_name }}</a>
-        {% endif %}
+
+    <div class="project-footer">
+      <div class="view-more">
+        <a href="{{ project.url }}" class="view-more-link">View More</a>
       </div>
-    {% endif %}
+      <ul class="tech-chips chip-container">
+        {% for i in project.tech %}
+          {% if i.priority %}
+            <li class="tech-chip">
+              <i class="{{ i.icon }}"></i>
+              <span>{{ i.name }}</span>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      {% if project.link_url or project.github_url %}
+        <div class="project-link">
+          {% if project.github_url %}
+            <a href="{{ project.github_url }}" target="_blank" rel="noopener">
+              <i class="devicon-github-original"></i>
+            </a>
+          {% else %}
+            <a href="{{ project.link_url }}" target="_blank" rel="noopener">
+              <i class="fa-solid fa-link"></i>
+            </a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
   </div>
 </div>

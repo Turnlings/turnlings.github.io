@@ -24,6 +24,12 @@
     height: 100%;
     width: 100%;
 
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+    }
+
     .content {
         margin: 0 0.5rem;
         h3.project-title {
