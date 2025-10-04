@@ -14,9 +14,13 @@ nav {
     
     a {
         font-size: 1.2rem;
-        color: $secondary-color;
+        color: $text;
         text-decoration: none;
         padding: 0.5rem 1rem;
         display: inline-block;
+
+        &:hover {
+            color: $text-muted;
+        }
     }
 }

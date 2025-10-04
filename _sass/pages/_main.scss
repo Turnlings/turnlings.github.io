@@ -40,6 +40,18 @@
             flex-direction: row; 
             gap: 1em; 
             align-items: center;
+
+            a {
+                display: flex; 
+                align-items: center; 
+                gap: 0.3em; 
+                text-decoration: none; 
+                color: inherit;
+
+                &:hover {
+                    color: $text-muted;
+                }
+            }
         }
     }
 
