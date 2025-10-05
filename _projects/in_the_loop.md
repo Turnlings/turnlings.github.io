@@ -6,7 +6,7 @@ link_name: itch.io
 link_url: https://turnlings.itch.io/in-the-loop
 image_url: /assets/images/in_the_loop/standing.png
 featured: true
-order: 6
+order: 3
 year: 2025
 tech:
   - icon: devicon-csharp-plain

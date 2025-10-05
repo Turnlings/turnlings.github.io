@@ -1,5 +1,5 @@
-<div class="project-card">
-  <a href="{{ project.url }}" class="project-card-link">
+<div class="project-card {% if include.row %}row{% endif %}">
+  <a href="{{ project.url }}" class="project-card-image-link">
     <img src="{{ project.image_url }}" alt="{{ project.title }} image" class="project-image">
   </a>
 

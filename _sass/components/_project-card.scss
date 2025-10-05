@@ -101,6 +101,18 @@
     }
 }
 
+.row {
+    flex-direction: row;
+
+    .project-card-image-link {
+        width: 50%;
+    }
+
+    .content-container {
+        width: 50%;
+    }
+}
+
 .project-meta {
     display: flex;
     align-items: center;

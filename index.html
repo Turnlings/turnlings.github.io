@@ -37,38 +37,4 @@ title: Portfolio
       {% endif %}
     {% endfor %}
   </div>
-
-  <div class="section-heading">
-    <hr class="section-rule">
-    <h2>Other Projects</h2>
-    <hr class="section-rule">
-  </div>
-  <div class="other-projects-list">
-    {% for project in sorted_projects %}
-      {% unless project.featured or project.hide %}
-        <div class="project-item">
-          <div class="project-title-row">
-            <a class="title" href="{{ project.url }}">{{ project.title }}</a>
-            <div class="project-icons-row">
-              <ul class="tech-chips">
-                {% for i in project.tech %}
-                  {% if i.priority %}
-                    <li class="tech-chip">
-                      <i class="{{ i.icon }}"></i>
-                      <span>{{ i.name }}</span>
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-          {% if project.description %}
-            <p>{{ project.description }}</p>
-          {% endif %}
-          <a href="{{ project.url }}" class="view-more-link">View More</a>
-        </div>
-        <hr class="tertiary-color">
-      {% endunless %}
-    {% endfor %}
-  </div>
 </div>
