@@ -102,26 +102,29 @@
     }
 }
 
-.row {
-    flex-direction: row;
+.row { /* Class to support side by side project cards, but switch back to normal on small screens*/
+    @media (min-width: $breakpoint-md) {
+        flex-direction: row;
+        text-align: left;
 
-    .project-card-image-link {
-        width: 50%;
-    }
+        .content {
+            margin: 1rem;
 
-    .content-container {
-        width: 50%;
-    }
-
-    @media (max-width: $breakpoint-md) {
-        flex-direction: column;
+            h3.project-title {
+                margin: 0 0 0.5rem;
+            }
+        }
 
         .project-card-image-link {
-            width: 100%;
+            width: 50%;
         }
 
         .content-container {
-            width: 100%;
+            width: 50%;
+        }
+
+        .project-footer {
+            margin: auto 1rem 1rem 1rem;
         }
     }
 }
