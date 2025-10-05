@@ -3,6 +3,7 @@ title: Toy Language Interpreter
 description: An interpreter for my own toy language, Quokka.
 layout: project
 github_url: https://github.com/Turnlings/quokka-interpreter
+image_url: /assets/images/quokka/thumbnail.png
 order: 2
 year: 2025
 tech:

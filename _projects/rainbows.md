@@ -3,7 +3,7 @@ title: Rainbow Badges
 description: A badge management system for local rainbows leaders.
 layout: project
 image_url: /assets/images/rainbows/thumbnail.png
-featured: true
+featured: 2
 order: 4
 year: 2025
 tech:

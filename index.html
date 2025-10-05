@@ -30,7 +30,7 @@ title: Portfolio
     <hr class="section-rule">
   </div>
   <div class="project-cards">
-    {% assign sorted_projects = site.projects | sort: "order" %}
+    {% assign sorted_projects = site.projects | sort: "featured" %}
     {% for project in sorted_projects %}
       {% if project.featured %}
         {% include project-card.html project=project %}

@@ -17,7 +17,7 @@
     border-radius: 0.5rem;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.3s ease;
     background-color: $bg-light;
     display: flex;
     flex-direction: column;
@@ -98,6 +98,7 @@
     &:hover {
         transform: translateY(-5px);
         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        border: 2px solid $brand;
     }
 }
 
@@ -110,6 +111,18 @@
 
     .content-container {
         width: 50%;
+    }
+
+    @media (max-width: $breakpoint-md) {
+        flex-direction: column;
+
+        .project-card-image-link {
+            width: 100%;
+        }
+
+        .content-container {
+            width: 100%;
+        }
     }
 }
 

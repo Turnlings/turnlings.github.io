@@ -5,7 +5,7 @@ layout: project
 link_name: itch.io
 link_url: https://turnlings.itch.io/in-the-loop
 image_url: /assets/images/in_the_loop/standing.png
-featured: true
+featured: 3
 order: 3
 year: 2025
 tech:
