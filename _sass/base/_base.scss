@@ -1,11 +1,18 @@
 html {
-    font-size: 16px;
+    font-size: 20px;
 }
 
 body {
     font-family: "Montserrat", Arial, sans-serif;
-    background-color: $secondary-color;
+    background-color: $bg;
     color: $text;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+.container {
+    flex: 1;
 }

@@ -2,8 +2,21 @@ $primary-color: #242424;
 $secondary-color: #f0f0f0;
 $tertiary-color: #d5d5d5;
 
-$text-bold: hsl(0, 0, 5);
-$text: hsl(0, 0, 10);
-$text-muted: hsl(0, 0, 30);
+$text-bold: hsl(0, 0, 95);
+$text: hsl(0, 0, 90);
+$text-muted: hsl(0, 0, 70);
 
 $base-page-width: 800px;
+
+$bg-dark: hsl(240, 10%, 5%);
+$bg: hsl(240, 10%, 10%);
+$bg-light: hsl(240, 10%, 15%);
+$highlight: hsl(240, 10%, 30%);
+$shadow: hsl(240, 10%, 0%);
+
+$brand: hsl(240, 50%, 50%);
+$brand-light: hsl(240, 50%, 70%);
+
+$breakpoint-sm: 600px;
+$breakpoint-md: 800px;
+$breakpoint-lg: 1000px;

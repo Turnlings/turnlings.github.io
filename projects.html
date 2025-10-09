@@ -1,0 +1,19 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+nav: true
+---
+
+{% assign sorted_projects = site.projects | sort: "order" %}
+
+<div class="main-page">
+  <div class="projects">
+    <h1>Projects</h1>
+    {% for project in sorted_projects %}
+      {% unless project.hide %}
+        {% include project-card.html project=project row=true%}
+      {% endunless %}
+    {% endfor %}
+  </div>
+</div>

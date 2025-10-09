@@ -1,0 +1,21 @@
+.link-button {
+    display: block;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    background-color: transparentize($brand, 0.5);
+    border: 1px solid $brand;
+    box-shadow: 0 4px 6px $shadow;
+
+    &:hover {
+        background-color: $brand;
+        box-shadow: 0 6px 10px $shadow;
+    }
+}
+
+.button-centre {
+    margin: 1rem auto;
+}

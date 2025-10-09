@@ -2,11 +2,11 @@
 title: In The Loop
 description: A GMTK2025 Game Jam submission.
 layout: project
-link_name: itch.io
+link_name: turnlings.itch.io/in-the-loop
 link_url: https://turnlings.itch.io/in-the-loop
 image_url: /assets/images/in_the_loop/standing.png
-featured: true
-order: 6
+featured: 3
+order: 3
 year: 2025
 tech:
   - icon: devicon-csharp-plain

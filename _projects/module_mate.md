@@ -6,7 +6,7 @@ link_name: modulemate.app
 link_url: https://modulemate.app
 github_url: https://github.com/Turnlings/grade-tracker
 image_url: /assets/images/grade_tracker/dashboard.png
-featured: true
+featured: 1
 order: 1
 year: 2025
 tech:
