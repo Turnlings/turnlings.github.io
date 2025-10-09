@@ -20,8 +20,12 @@ footer {
         justify-content: center;
 
         a {
-            color: inherit;
+            color: $text;
             text-decoration: none;
+
+            &:hover {
+                color: $text-muted;
+            }
         }
 
         i {
