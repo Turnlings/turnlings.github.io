@@ -8,9 +8,11 @@
     text-align: center;
     background-color: transparentize($brand, 0.5);
     border: 1px solid $brand;
+    box-shadow: 0 4px 6px $shadow;
 
     &:hover {
         background-color: $brand;
+        box-shadow: 0 6px 10px $shadow;
     }
 }
 
