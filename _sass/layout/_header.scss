@@ -22,5 +22,10 @@ nav {
         &:hover {
             color: $text-muted;
         }
+
+        @media (max-width: $breakpoint-sm) {
+            font-size: 1rem;
+            padding: 0.5rem 0.5rem;
+        }
     }
 }

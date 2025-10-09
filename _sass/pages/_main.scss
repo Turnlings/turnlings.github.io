@@ -135,6 +135,18 @@
         border-top: 2px solid $tertiary-color;
         margin: 0;
     }
+
+    @media (max-width: $breakpoint-sm) {
+        justify-content: center;
+
+        h2 {
+            white-space: inherit;
+        }
+
+        .section-rule {
+            display: none;
+        }
+    }
 }
 
 .section {
