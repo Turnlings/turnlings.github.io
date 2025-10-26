@@ -28,11 +28,11 @@
       {% if project.link_url or project.github_url %}
         <div class="project-link">
           {% if project.github_url %}
-            <a href="{{ project.github_url }}" target="_blank" rel="noopener">
+            <a href="{{ project.github_url }}" target="_blank" rel="noopener" aria-label="Visit github link">
               <i class="devicon-github-original"></i>
             </a>
           {% else %}
-            <a href="{{ project.link_url }}" target="_blank" rel="noopener">
+            <a href="{{ project.link_url }}" target="_blank" rel="noopener" aria-label="Visit project link">
               <i class="fa-solid fa-link"></i>
             </a>
           {% endif %}

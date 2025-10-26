@@ -12,12 +12,17 @@ footer {
     }
 
     ul {
+        list-style: none;
         display: flex;
         flex-direction: row;
         gap: 0.5rem;
         padding: 0;
         align-items: center;
         justify-content: center;
+
+        li {
+            margin: 0;
+        }
 
         a {
             color: $text;
