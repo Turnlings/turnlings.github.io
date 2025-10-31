@@ -20,4 +20,21 @@ I also had to work on systems to bring real geographical data into the game.
 ## Features
 - Troop navigation across a realistic map of Europe.
 - Economy system to earn money and buy troops.
+- Army designer allowing you to change the composition (infantry, cavalry, etc...)
 - AI countries to fight against and engage in diplomacy.
+
+## Debug Mode
+![Debug mode](/assets/images/continental_system/debug.png)
+
+The main technical aspects can be seen here through all the information on the left and the graph. The graph is used for troop movements, but each node also represents a region that can be conquered by others. This is toggled on with the D key. These regions are generated on initialisation from a hand-traced image of regions of Europe, I coloured each region a different colour so they could be identified by the program.
+
+## Images
+![Sieging](/assets/images/continental_system/sieging.png)
+*An army must stay in a region for a period of time in order to occupy it and for it to become their territory.*
+
+![Building mode](/assets/images/continental_system/building.png)
+*You can build factories that lets you make equipment so you can design and build armies. This allows you to become progressively stronger.*
+
+![France vs Russia](/assets/images/continental_system/france_win.png)
+*Here the player has lost as their country (UK) has been conquered, France are Russia are now fighting out to find out the victor. Other countries still exist, but due to snowballing they don't really have a chance.*
+
