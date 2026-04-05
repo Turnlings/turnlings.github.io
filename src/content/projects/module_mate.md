@@ -1,5 +1,5 @@
 ---
-title: ModuleMate
+title: ModuleMate.app
 description: Track study time, manage upcoming exams, calculate final grades.
 layout: project
 link_name: modulemate.app

@@ -1,4 +1,4 @@
-import { Container, Group } from "@mantine/core";
+import { Container, Group, Text } from "@mantine/core";
 import { Link } from "react-router-dom";
 
 const links = [
@@ -9,20 +9,17 @@ const links = [
 export default function Header() {
 
   const items = links.map((link) => (
-    <Link
-      key={link.label}
-      to={link.link}
-    >
+    <Text key={link.label} component={Link} to={link.link} size="lg">
       {link.label}
-    </Link>
+    </Text>
   ));
 
   return (
-    <header>
-      <Container>
-        <Group justify="space-between">
-          Header
-          <Group gap={5} visibleFrom="xs">
+    <header className="h-14 border-b border-b-gray-300 dark:border-b-dark-400">
+      <Container h="100%">
+        <Group h="100%" align="center" justify="space-between">
+          <Text size="lg">Header</Text>
+          <Group gap="md" visibleFrom="xs">
             {items}
           </Group>
         </Group>

@@ -22,7 +22,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Card withBorder radius="md" padding="md">
       <CardSection>
-        <Image src={project.image_url} height={180} fit="cover" />
+        <Image src={project.image_url} className="w-full aspect-video object-cover"/>
       </CardSection>
 
       <Stack gap="xs">

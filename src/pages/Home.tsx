@@ -5,13 +5,13 @@ import Introduction from "../components/Introduction";
 
 export default function Home() {
   return (
-    <Container>
+    <Container mt="lg">
       <Stack gap="xl">
-        <Grid align="start">
-          <GridCol span={{ base: 12, md: 'auto' }}>
+        <Grid align="stretch">
+          <GridCol span={{ base: 12, md: 'auto' }} h="100%">
             <Introduction/>
           </GridCol>
-          <GridCol span={{ base: 12, md: 'content' }} style={{ display: 'flex', justifyContent: 'center' }}>
+          <GridCol span={{ base: 12, md: 'content' }} h="100%" style={{ display: 'flex', justifyContent: 'center' }}>
             <Career/>
           </GridCol>
         </Grid>
