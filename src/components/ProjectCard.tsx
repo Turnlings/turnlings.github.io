@@ -1,4 +1,4 @@
-import { Badge, Button, Card, CardSection, Group, Text } from "@mantine/core";
+import { Badge, Button, Card, CardSection, Group, Image, Stack, Text } from "@mantine/core";
 
 export default function ProjectCard({project}) {
   const techStack = project.tech.map((tech) => (
@@ -10,27 +10,30 @@ export default function ProjectCard({project}) {
   return (
     <Card withBorder radius="md" padding="md">
       <CardSection>
-        Image
+        <Image src={project.image_url}></Image>
       </CardSection>
 
-      <Group>
+      <Stack>
         <Group mt="sm" gap="xs">
-          <Text fz="lg">{project.title}</Text>
-          <Text fz="sm">{project.description}</Text>
+          <Group justify="space-between" w="100%">
+            <Text fz="lg" fw={500}>{project.title}</Text>
+            {project.game && <Badge>Game</Badge>}
+          </Group>
+          <Text fz="md">{project.description}</Text>
         </Group>
 
         <Group gap="xs">
-          <Text fz="sm" c="dimmed" className="">{"Tech Stack"}</Text>
+          <Text fz="md" c="dimmed" className="">{"Tech Stack"}</Text>
           <Group gap="xs">
             {techStack}
           </Group>
         </Group>
 
-        <Group>
+        <Group grow>
           <Button variant="default">Github</Button>
           <Button>View</Button>
         </Group>
-      </Group>
+      </Stack>
     </Card>
   )
 }

@@ -7,6 +7,7 @@ link_url: https://turnlings.itch.io/ladder-lord
 image_url: /assets/images/ladder_lord/tutorial.png
 order: 6
 year: 2024
+game: true
 tech:
   - icon: devicon-csharp-plain
     name: C#

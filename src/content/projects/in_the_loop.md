@@ -7,6 +7,7 @@ link_url: https://turnlings.itch.io/in-the-loop
 image_url: /assets/images/in_the_loop/standing.png
 order: 3
 year: 2025
+game: true
 tech:
   - icon: devicon-csharp-plain
     name: C#
