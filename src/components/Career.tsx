@@ -28,21 +28,18 @@ const items: {
 
 export default function Career() {
   return (
-    <Center>
-      <Stack>
-        <Text size="xl" fw={500} ta="center">My Journey</Text>
-        <Timeline active={1} reverseActive bulletSize={25}>
-          {items.map((i) => (
-            <TimelineItem title={i.position} {...(i.lineVariant && { lineVariant: i.lineVariant })}>
-              <Text>{i.company}</Text>
-              {i.description &&
-                <Text c="dimmed">{i.description}</Text>
-              }
-              <Text c="dimmed" size="sm">{i.date}</Text>
-            </TimelineItem>
-          ))}
-        </Timeline>
-      </Stack>
-    </Center>
+    <Stack>
+      <Timeline active={1} reverseActive bulletSize={25}>
+        {items.map((i) => (
+          <TimelineItem title={i.position} {...(i.lineVariant && { lineVariant: i.lineVariant })}>
+            <Text>{i.company}</Text>
+            {i.description &&
+              <Text c="dimmed">{i.description}</Text>
+            }
+            <Text c="dimmed" size="sm">{i.date}</Text>
+          </TimelineItem>
+        ))}
+      </Timeline>
+    </Stack>
   )
 }
