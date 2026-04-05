@@ -1,4 +1,4 @@
-import { Badge, Button, Card, CardSection, Group, Image, Stack, Text } from "@mantine/core";
+import { Badge, Button, Card, CardSection, Divider, Group, Image, Stack, Text } from "@mantine/core";
 import { Link } from "react-router-dom";
 
 interface Project {
@@ -25,19 +25,23 @@ export default function ProjectCard({ project }: { project: Project }) {
         <Image src={project.image_url} height={180} fit="cover" />
       </CardSection>
 
-      <Stack>
+      <Stack gap="xs">
         <Group mt="sm" gap="xs">
-          <Group justify="space-between" w="100%">
+          <Group justify="space-between" w="100%" gap="xs">
             <Text fz="lg" fw={500}>{project.title}</Text>
             {project.game && <Badge>Game</Badge>}
           </Group>
           <Text fz="md">{project.description}</Text>
         </Group>
 
+        <Divider/>
+
         <Group gap="xs">
           <Text fz="md" c="dimmed">Tech Stack</Text>
           <Group gap="xs">{techStack}</Group>
         </Group>
+
+        <Divider/>
 
         <Group grow>
           {project.github_url && (

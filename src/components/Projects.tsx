@@ -11,14 +11,12 @@ export default function Projects() {
   }, []);
 
   return (
-    <Container>
-      <Grid>
-        {projects.map((p) => (
-          <GridCol key={p.slug} span={4}>
-            <ProjectCard project={p}></ProjectCard>
-          </GridCol>
-        ))}
-      </Grid>
-    </Container>
+    <Grid>
+      {projects.map((p) => (
+        <GridCol key={p.slug} span={4}>
+          <ProjectCard project={p}></ProjectCard>
+        </GridCol>
+      ))}
+    </Grid>
   );
 }
