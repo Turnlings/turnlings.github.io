@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { getProjects } from '../lib/getProjects';
-import type { Project } from '../lib/getProjects';
+import type { Project } from '../types/project';
 import { Container, Loader, Text, Typography } from '@mantine/core';
 
 export default function ProjectPage() {

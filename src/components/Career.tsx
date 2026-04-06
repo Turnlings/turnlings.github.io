@@ -1,4 +1,4 @@
-import { Stack, Text, Timeline, TimelineItem } from "@mantine/core";
+import { Text, Timeline, TimelineItem } from "@mantine/core";
 
 const items: {
   position: string;

@@ -1,18 +1,15 @@
 import { Badge, Button, Card, CardSection, Divider, Group, Image, Stack, Text } from "@mantine/core";
 import { Link } from "react-router-dom";
+import ExternalLinkButton from "./ExternalLinkButton";
+import type { Project } from "../types/project";
 
-interface Project {
-  slug: string;
-  title: string;
-  description: string;
-  image_url: string;
-  github_url?: string;
-  link_url?: string;
-  tech: { icon: string; name: string; priority?: boolean }[];
-  game?: boolean;
+interface ProjectCardProps {
+  project: Project;
+  setProject: (project: Project) => void;
+  setProjectModalOpen: (open: boolean) => void;
 }
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project, setProject, setProjectModalOpen }: ProjectCardProps) {
   const techStack = project.tech.map((tech) => (
     <Badge variant="outline" key={tech.name} leftSection={<i className={tech.icon} />}>
       {tech.name}
@@ -45,20 +42,14 @@ export default function ProjectCard({ project }: { project: Project }) {
 
         <Group grow>
           {project.github_url && (
-            <Button
-              component="a"
-              href={project.github_url}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="default"
-            >
-              Github
-            </Button>
+            <ExternalLinkButton text={"Github"} link_url={project.github_url}/>
           )}
           <Button
-            component={Link}
-            to={`/projects/${project.slug}`}
             variant="filled"
+            onClick={() => {
+              setProject(project)
+              setProjectModalOpen(true)
+            }}
           >
             View
           </Button>

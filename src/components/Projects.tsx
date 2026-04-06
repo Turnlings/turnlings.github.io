@@ -1,28 +1,30 @@
 import { useEffect, useState } from 'react';
 import { getProjects } from '../lib/getProjects';
 import ProjectCard from './ProjectCard';
-import { ActionIcon, Container, Grid, GridCol, TextInput } from '@mantine/core';
+import { ActionIcon, Grid, GridCol, TextInput } from '@mantine/core';
 import { IconArrowRight, IconSearch } from '@tabler/icons-react';
+import type { Project } from '../types/project';
 
-export default function Projects() {
+interface ProjectsProps {
+  selected: Project;
+  setProject: (project: Project) => void;
+  setProjectModalOpen: (open: boolean) => void;
+}
+
+export default function Projects({selected, setProject, setProjectModalOpen}: ProjectsProps) {
   const [projects, setProjects] = useState<any[]>([]);
-  const [filteredProjects, setFilteredProjects] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     getProjects().then(setProjects);
   }, []);
 
-  useEffect(() => {
-    setFilteredProjects(
-      projects.filter((p) =>
-        p.title.toLowerCase().includes(searchTerm.trim().toLowerCase()) ||
-        p.tech.some((tech: { name: string }) =>
-          tech.name.toLowerCase().includes(searchTerm.trim().toLowerCase())
-        )
-      )
+  const filteredProjects = projects.filter((p) =>
+    p.title.toLowerCase().includes(searchTerm.trim().toLowerCase()) ||
+    p.tech.some((tech: { name: string }) =>
+      tech.name.toLowerCase().includes(searchTerm.trim().toLowerCase())
     )
-  }, [projects, searchTerm])
+  );
 
   return (
     <>
@@ -48,7 +50,7 @@ export default function Projects() {
     <Grid>
       {filteredProjects.map((p) => (
         <GridCol key={p.slug} span={4}>
-          <ProjectCard project={p}></ProjectCard>
+          <ProjectCard project={p} setProject={setProject} setProjectModalOpen={setProjectModalOpen}></ProjectCard>
         </GridCol>
       ))}
     </Grid>
