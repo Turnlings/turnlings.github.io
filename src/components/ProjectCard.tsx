@@ -17,12 +17,12 @@ export default function ProjectCard({ project, setProject, setProjectModalOpen }
   ));
 
   return (
-    <Card withBorder radius="md" padding="md">
+    <Card withBorder radius="md" padding="md" h="100%">
       <CardSection>
         <Image src={project.image_url} className="w-full aspect-video object-cover"/>
       </CardSection>
 
-      <Stack gap="xs">
+      <Stack gap="xs" h="100%">
         <Group mt="sm" gap="xs">
           <Group justify="space-between" w="100%" gap="xs">
             <Text fz="lg" fw={500}>{project.title}</Text>
@@ -34,9 +34,11 @@ export default function ProjectCard({ project, setProject, setProjectModalOpen }
         <Divider/>
 
         <Group gap="xs">
-          <Text fz="md" c="dimmed">Tech Stack</Text>
+          <Text fz="md" c="dimmed" w="100%">Tech Stack</Text>
           <Group gap="xs">{techStack}</Group>
         </Group>
+
+        <div className="flex-1" />
 
         <Divider/>
 

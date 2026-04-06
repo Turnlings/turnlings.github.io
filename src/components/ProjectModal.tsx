@@ -3,6 +3,7 @@ import ExternalLinkButton from "./ExternalLinkButton";
 import { useState } from "react";
 import { IconFileDescription, IconPhoto } from "@tabler/icons-react";
 import type { Project } from "../types/project";
+import { useMediaQuery } from "@mantine/hooks";
 
 interface ProjectModalProps {
   project: Project;
@@ -12,6 +13,7 @@ interface ProjectModalProps {
 
 export default function ProjectModal({project, projectModalOpen, setProjectModalOpen}: ProjectModalProps) {
   const [activeTab, setActiveTab] = useState<string | null>("description");
+  const isMobile = useMediaQuery('(max-width: 50em)');
 
   if (project===null) {
     return (<></>)
@@ -22,8 +24,9 @@ export default function ProjectModal({project, projectModalOpen, setProjectModal
       title={project.title} 
       opened={projectModalOpen} 
       onClose={() => setProjectModalOpen(false)}
-
+      fullScreen={isMobile}
       size="lg"
+      centered
     >
       <Stack gap="sm">
         <Text fs="italic">{project.description}</Text>

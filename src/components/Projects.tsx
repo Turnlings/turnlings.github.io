@@ -24,7 +24,7 @@ export default function Projects({selected, setProject, setProjectModalOpen}: Pr
     p.tech.some((tech: { name: string }) =>
       tech.name.toLowerCase().includes(searchTerm.trim().toLowerCase())
     )
-  );
+  ).sort((a: Project, b: Project) => (a.order ?? 0) - (b.order ?? 0));
 
   return (
     <>
@@ -47,13 +47,13 @@ export default function Projects({selected, setProject, setProjectModalOpen}: Pr
       aria-label="Search projects"
       onChange={(event) => setSearchTerm(event.currentTarget.value)}
     />
-    <Grid>
+    <div className="grid gap-4 grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 items-stretch">
       {filteredProjects.map((p) => (
-        <GridCol key={p.slug} span={4}>
-          <ProjectCard project={p} setProject={setProject} setProjectModalOpen={setProjectModalOpen}></ProjectCard>
-        </GridCol>
+        <div key={p.slug} className="h-full">
+          <ProjectCard project={p} setProject={setProject} setProjectModalOpen={setProjectModalOpen} />
+        </div>
       ))}
-    </Grid>
+    </div>
     </>
   );
 }
