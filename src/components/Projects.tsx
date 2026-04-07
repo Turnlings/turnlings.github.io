@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getProjects } from '../lib/getProjects';
 import ProjectCard from './ProjectCard';
-import { ActionIcon, Grid, GridCol, TextInput } from '@mantine/core';
+import { ActionIcon, Grid, GridCol, Text, TextInput } from '@mantine/core';
 import { IconArrowRight, IconSearch } from '@tabler/icons-react';
 import type { Project } from '../types/project';
 
@@ -54,6 +54,9 @@ export default function Projects({selected, setProject, setProjectModalOpen}: Pr
         </div>
       ))}
     </div>
+    {filteredProjects.length === 0 && (
+      <Text c="dimmed" ta="center" my="lg">No projects match your search</Text>
+    )}
     </>
   );
 }
