@@ -5,6 +5,7 @@ import { IconFileDescription, IconPhoto } from "@tabler/icons-react";
 import type { Project } from "../types/project";
 import { useMediaQuery } from "@mantine/hooks";
 import Markdown from 'react-markdown'
+import TechStack from "./TechStack";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -31,6 +32,8 @@ export default function ProjectModal({project, projectModalOpen, setProjectModal
     >
       <Stack gap="sm">
         <Text fs="italic">{project.description}</Text>
+
+        <TechStack techStack={project.tech}/>
 
         <Group grow>
           {project.github_url && (

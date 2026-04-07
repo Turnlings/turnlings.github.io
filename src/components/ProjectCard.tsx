@@ -2,6 +2,7 @@ import { Badge, Button, Card, CardSection, Divider, Group, Image, Stack, Text } 
 import { Link } from "react-router-dom";
 import ExternalLinkButton from "./ExternalLinkButton";
 import type { Project } from "../types/project";
+import TechStack from "./TechStack";
 
 interface ProjectCardProps {
   project: Project;
@@ -10,11 +11,6 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ project, setProject, setProjectModalOpen }: ProjectCardProps) {
-  const techStack = project.tech.map((tech) => (
-    <Badge variant="outline" key={tech.name} leftSection={<i className={tech.icon} />}>
-      {tech.name}
-    </Badge>
-  ));
 
   return (
     <Card withBorder radius="md" padding="md" h="100%">
@@ -35,7 +31,7 @@ export default function ProjectCard({ project, setProject, setProjectModalOpen }
 
         <Group gap="xs">
           <Text fz="md" c="dimmed" w="100%">Tech Stack</Text>
-          <Group gap="xs">{techStack}</Group>
+          <TechStack techStack={project.tech}/>
         </Group>
 
         <div className="flex-1" />
