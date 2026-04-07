@@ -1,4 +1,4 @@
-import matter from 'gray-matter';
+import fm from 'front-matter';
 import type { Project } from '../types/project';
 
 export async function getProjects(): Promise<Project[]> {
@@ -9,11 +9,10 @@ export async function getProjects(): Promise<Project[]> {
   });
 
   return Object.entries(modules).map(([path, raw]) => {
-    const { data, content } = matter(raw as string);
-
+    const { attributes, body: content } = fm<Partial<Project>>(raw as string);
     return {
       slug: path.split('/').pop()?.replace('.md', ''),
-      ...data,
+      ...attributes,
       content,
     } as Project;
   });

@@ -6,8 +6,8 @@ import { IconArrowRight, IconSearch } from '@tabler/icons-react';
 import type { Project } from '../types/project';
 
 interface ProjectsProps {
-  selected: Project;
-  setProject: (project: Project) => void;
+  selected: Project | null;
+  setProject: (project: Project | null) => void;
   setProjectModalOpen: (open: boolean) => void;
 }
 

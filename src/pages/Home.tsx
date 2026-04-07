@@ -4,10 +4,11 @@ import Projects from "../components/Projects";
 import Introduction from "../components/Introduction";
 import { useState } from "react";
 import ProjectModal from "../components/ProjectModal";
+import type { Project } from "../types/project";
 
 export default function Home() {
   const [projectModalOpen, setProjectModalOpen] = useState(false)
-  const [project, setProject] = useState(null)
+  const [project, setProject] = useState<Project | null>(null)
 
 
   return (
