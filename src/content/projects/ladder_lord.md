@@ -7,7 +7,11 @@ link_url: https://turnlings.itch.io/ladder-lord
 image_url: /assets/images/ladder_lord/tutorial.png
 order: 6
 year: 2024
-game: true
+type: game
+play: 
+  src: https://itch.io/embed-upload/14303005?color=323232
+  link: https://turnlings.itch.io/ladder-lord
+  text: Play Ladder Lord on itch.io
 tech:
   - icon: devicon-csharp-plain
     name: C#

@@ -1,11 +1,12 @@
-import { Text, Modal, Group, Button, Tabs, Stack, ScrollAreaAutosize, ScrollArea, Title, List, Anchor } from "@mantine/core";
+import { Text, Modal, Group, Button, Tabs, Stack, ScrollAreaAutosize, ScrollArea, Title, List, Anchor, Center } from "@mantine/core";
 import ExternalLinkButton from "./ExternalLinkButton";
 import { useState } from "react";
-import { IconFileDescription, IconPhoto } from "@tabler/icons-react";
+import { IconFileDescription, IconPhoto, IconPlayerPlay } from "@tabler/icons-react";
 import type { Project } from "../types/project";
 import { useMediaQuery } from "@mantine/hooks";
 import Markdown from 'react-markdown'
 import TechStack from "./TechStack";
+import Playable from "./Playable";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -48,6 +49,9 @@ export default function ProjectModal({project, projectModalOpen, setProjectModal
           <Tabs.List>
             <Tabs.Tab value="description" leftSection={<IconFileDescription size={12} />}>Description</Tabs.Tab>
             <Tabs.Tab value="gallery" leftSection={<IconPhoto size={12} />}>Gallery</Tabs.Tab>
+            {project.play && (
+              <Tabs.Tab value="play" leftSection={<IconPlayerPlay size={12} />}>Play</Tabs.Tab>
+            )}
           </Tabs.List>
 
           <Tabs.Panel value="description" mt="sm">
@@ -72,6 +76,11 @@ export default function ProjectModal({project, projectModalOpen, setProjectModal
             </ScrollArea>
           </Tabs.Panel>
           <Tabs.Panel value="gallery">Second panel</Tabs.Panel>
+          {project.play && (
+            <Tabs.Panel value="play">
+              <Playable game={project.play}/>
+            </Tabs.Panel>
+          )}
         </Tabs>
       </Stack>
     </Modal>

@@ -5,7 +5,7 @@ layout: project
 image_url: /assets/images/continental_system/thumbnail.png
 order: 8
 year: 2022-2023
-game: true
+type: game
 tech:
   - icon: devicon-java-plain
     name: Java

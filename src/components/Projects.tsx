@@ -29,6 +29,7 @@ export default function Projects({selected, setProject, setProjectModalOpen}: Pr
   return (
     <>
     <TextInput
+      id="projects"
       radius="xl"
       size="md"
       placeholder="Search projects"

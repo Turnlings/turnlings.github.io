@@ -22,7 +22,7 @@ export default function ProjectCard({ project, setProject, setProjectModalOpen }
         <Group mt="sm" gap="xs">
           <Group justify="space-between" w="100%" gap="xs">
             <Text fz="lg" fw={500}>{project.title}</Text>
-            {project.game && <Badge>Game</Badge>}
+            {project.type && <Badge>{project.type}</Badge>}
           </Group>
           <Text fz="md">{project.description}</Text>
         </Group>

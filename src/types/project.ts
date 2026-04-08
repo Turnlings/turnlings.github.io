@@ -6,7 +6,8 @@ export interface Project {
   github_url?: string;
   link_url?: string;
   tech: Tech[];
-  game?: boolean;
+  play: Play;
+  type?: string;
   content: string;
   [key: string]: any;
 }
@@ -15,4 +16,10 @@ export interface Tech {
   icon: string;
   name: string;
   priority?: boolean;
+}
+
+export interface Play {
+  src: string;
+  link: string;
+  text: string;
 }

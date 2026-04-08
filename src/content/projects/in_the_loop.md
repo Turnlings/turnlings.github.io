@@ -7,7 +7,11 @@ link_url: https://turnlings.itch.io/in-the-loop
 image_url: /assets/images/in_the_loop/standing.png
 order: 3
 year: 2025
-game: true
+type: game
+play: 
+  src: https://itch.io/embed-upload/14544328?color=737373
+  link: https://turnlings.itch.io/in-the-loop
+  text: Play In The Loop on itch.io<
 tech:
   - icon: devicon-csharp-plain
     name: C#

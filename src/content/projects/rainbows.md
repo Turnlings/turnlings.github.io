@@ -5,6 +5,7 @@ layout: project
 image_url: /assets/images/rainbows/thumbnail.png
 order: 4
 year: 2025
+type: academic
 tech:
   - icon: devicon-ruby-plain
     name: Ruby

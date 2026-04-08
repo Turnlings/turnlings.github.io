@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 const links = [
   { link: '/', label: 'Home' },
-  { link: '/other', label: 'Other' },
+  { link: '#projects', label: 'Projects' },
 ];
 
 export default function Header() {
 
   const items = links.map((link) => (
-    <Text key={link.label} component={Link} to={link.link} size="lg">
+    <Text key={link.label} component="a" href={link.link} size="lg">
       {link.label}
     </Text>
   ));
