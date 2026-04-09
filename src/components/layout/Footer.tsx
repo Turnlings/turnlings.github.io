@@ -19,7 +19,7 @@ export default function Footer() {
     <footer className="h-20 border-t border-t-gray-300 dark:border-t-dark-400 mt-4">
       <Container h="100%">
         <Group justify="space-between" h="100%">
-          <Text>Ryan Turner 2026</Text>
+          <Text>&copy; Ryan Turner 2026</Text>
           <Group>
             {socials.map((s) =>
               <ActionIcon

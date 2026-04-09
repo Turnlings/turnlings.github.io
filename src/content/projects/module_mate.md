@@ -9,6 +9,7 @@ image_url: /assets/images/grade_tracker/dashboard.png
 featured: 1
 order: 1
 year: 2025
+type: current
 tech:
   - icon: devicon-ruby-plain
     name: Ruby
@@ -28,6 +29,16 @@ tech:
     name: GitHub Actions
   - icon: devicon-git-plain
     name: Git
+images:
+  - path: /assets/images/grade_tracker/dashboard.png
+    alt: Dashboard
+    desc: The dashboard presents the user with all their collated stats, and easy navigation to find more details.
+  - path: /assets/images/grade_tracker/module.png 
+    alt: Modules
+    desc: Modules let you manage your exams and calculate your scores.
+  - path: /assets/images/grade_tracker/track.png
+    alt: Tracker
+    desc: Track the time you spend on modules so you can see where you've been slacking.
 ---
 A web-based application designed to help students monitor their academic progress across multiple modules. Users can input grades, calculate weighted averages, and visualize performance trends throughout the year.
 
@@ -39,13 +50,3 @@ This is my replacement for a series of spreadsheets I used to use that got too c
 - Calculate final grades automatically based on scores and weighted averages.
 - Visualize performance trends across modules over the year.
 - Share a link or code for your semester template with other users.
-
-## Images
-![Dashboard](/assets/images/grade_tracker/dashboard.png)
-*The dashboard presents the user with all their collated stats, and easy navigation to find more details.*
-
-![Modules](/assets/images/grade_tracker/module.png)
-*Modules let you manage your exams and calculate your scores.*
-
-![Modules](/assets/images/grade_tracker/track.png)
-*Track the time you spend on modules so you can see where you've been slacking.*

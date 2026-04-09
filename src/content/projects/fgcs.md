@@ -9,6 +9,7 @@ image_url: /assets/images/fgcs/github_readme.png
 featured: 2
 order: 0
 year: 2025
+type: current
 tech:
   - icon: devicon-react-plain
     name: React

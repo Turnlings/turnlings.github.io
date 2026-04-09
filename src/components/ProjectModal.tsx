@@ -1,6 +1,6 @@
-import { Text, Modal, Group, Button, Tabs, Stack, ScrollAreaAutosize, ScrollArea, Title, List, Anchor, Center } from "@mantine/core";
+import { Text, Modal, Group, Button, Tabs, Stack, ScrollAreaAutosize, ScrollArea, Title, List, Anchor, Center, Image } from "@mantine/core";
 import ExternalLinkButton from "./ExternalLinkButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IconFileDescription, IconPhoto, IconPlayerPlay } from "@tabler/icons-react";
 import type { Project } from "../types/project";
 import { useMediaQuery } from "@mantine/hooks";
@@ -18,6 +18,12 @@ export default function ProjectModal({project, projectModalOpen, setProjectModal
   const [activeTab, setActiveTab] = useState<string | null>("description");
   const isMobile = useMediaQuery('(max-width: 50em)');
 
+  useEffect(() => {
+    if (project) {
+      setActiveTab("description");
+    }
+  }, [project]);
+
   if (project===null) {
     return (<></>)
   }
@@ -28,7 +34,7 @@ export default function ProjectModal({project, projectModalOpen, setProjectModal
       opened={projectModalOpen} 
       onClose={() => setProjectModalOpen(false)}
       fullScreen={isMobile}
-      size="lg"
+      size="xl"
       centered
     >
       <Stack gap="sm">
@@ -48,7 +54,9 @@ export default function ProjectModal({project, projectModalOpen, setProjectModal
         <Tabs value={activeTab} onChange={setActiveTab}>
           <Tabs.List>
             <Tabs.Tab value="description" leftSection={<IconFileDescription size={12} />}>Description</Tabs.Tab>
-            <Tabs.Tab value="gallery" leftSection={<IconPhoto size={12} />}>Gallery</Tabs.Tab>
+            {project.images && (
+              <Tabs.Tab value="gallery" leftSection={<IconPhoto size={12} />}>Gallery</Tabs.Tab>
+            )}
             {project.play && (
               <Tabs.Tab value="play" leftSection={<IconPlayerPlay size={12} />}>Play</Tabs.Tab>
             )}
@@ -75,7 +83,16 @@ export default function ProjectModal({project, projectModalOpen, setProjectModal
               </Markdown>
             </ScrollArea>
           </Tabs.Panel>
-          <Tabs.Panel value="gallery">Second panel</Tabs.Panel>
+
+          <Tabs.Panel value="gallery">
+            {project.images?.map((i) =>
+              <div key={i.alt}>
+                <Image mt="sm" radius="md" src={i.path} alt={i.alt}/>
+                <Text fs="italic">{i.desc}</Text>
+              </div>
+            )}
+          </Tabs.Panel>
+
           {project.play && (
             <Tabs.Panel value="play">
               <Playable game={project.play}/>

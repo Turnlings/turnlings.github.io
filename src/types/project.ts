@@ -8,6 +8,7 @@ export interface Project {
   tech: Tech[];
   play: Play;
   type?: string;
+  images: Image[];
   content: string;
   [key: string]: any;
 }
@@ -22,4 +23,10 @@ export interface Play {
   src: string;
   link: string;
   text: string;
+}
+
+export interface Image {
+  path: string;
+  alt: string;
+  desc: string;
 }
