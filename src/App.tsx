@@ -1,25 +1,39 @@
 import '@mantine/core/styles.css';
 
-import { MantineProvider } from '@mantine/core';
+import { useState } from 'react';
+import { MantineProvider, Container, Stack } from '@mantine/core';
 import Header from './components/layout/Header';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import ProjectPage from './pages/Project';
 import Footer from './components/layout/Footer';
+import Introduction from './components/Introduction';
+import Career from './components/Career';
+import Projects from './components/Projects';
+import ProjectModal from './components/ProjectModal';
+import type { Project } from './types/project';
 
 export default function App() {
+  const [projectModalOpen, setProjectModalOpen] = useState(false)
+  const [project, setProject] = useState<Project | null>(null)
+
   return <MantineProvider defaultColorScheme="dark">
-    <BrowserRouter>
-      <div className="flex flex-col min-h-screen">
-        <Header/>
-        <div className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/projects/:slug" element={<ProjectPage/>} />
-          </Routes>
-        </div>
-        <Footer/>
+    <div className="flex flex-col min-h-screen">
+      <Header/>
+      <div className="flex-1">
+        <Container mt="lg">
+          <Stack gap="xl">
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-[auto_max-content] items-stretch w-full">
+              <div className="h-full">
+                <Introduction/>
+              </div>
+              <div className="h-full flex justify-center">
+                <Career/>
+              </div>
+            </div>
+            <Projects selected={project} setProject={setProject} setProjectModalOpen={setProjectModalOpen}/>
+          </Stack>
+          <ProjectModal project={project} projectModalOpen={projectModalOpen} setProjectModalOpen={setProjectModalOpen}/>
+        </Container>
       </div>
-    </BrowserRouter>
+      <Footer/>
+    </div>
   </MantineProvider>;
 }

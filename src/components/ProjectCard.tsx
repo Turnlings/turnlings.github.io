@@ -1,5 +1,4 @@
 import { Badge, Button, Card, CardSection, Divider, Group, Image, Stack, Text } from "@mantine/core";
-import { Link } from "react-router-dom";
 import ExternalLinkButton from "./ExternalLinkButton";
 import type { Project } from "../types/project";
 import TechStack from "./TechStack";
