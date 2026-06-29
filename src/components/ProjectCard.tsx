@@ -36,7 +36,7 @@ export default function ProjectCard({project}: {project: Project}) {
           {project.github_url && (
             <ExternalLinkButton text={"Github"} link_url={project.github_url}/>
           )}
-          <Link to={`/projects/${project.slug}`}>View Details</Link>
+          <Button component={Link} to={`/projects/${project.slug}`}>View</Button>
         </Group>
       </Stack>
     </Card>

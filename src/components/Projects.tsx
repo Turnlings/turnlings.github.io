@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getProjects } from '../lib/getProjects';
 import ProjectCard from './ProjectCard';
-import { ActionIcon, Grid, GridCol, Text, TextInput } from '@mantine/core';
+import { ActionIcon, Text, TextInput } from '@mantine/core';
 import { IconArrowRight, IconSearch } from '@tabler/icons-react';
 import type { Project } from '../types/project';
 

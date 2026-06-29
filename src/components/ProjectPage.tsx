@@ -1,9 +1,8 @@
-import { Text, Modal, Group, Button, Tabs, Stack, ScrollAreaAutosize, ScrollArea, Title, List, Anchor, Center, Image } from "@mantine/core";
+import { Text, Group, Tabs, Stack, ScrollArea, Title, List, Anchor, Image } from "@mantine/core";
 import ExternalLinkButton from "./ExternalLinkButton";
 import { useEffect, useState } from "react";
 import { IconFileDescription, IconPhoto, IconPlayerPlay } from "@tabler/icons-react";
 import type { Project } from "../types/project";
-import { useMediaQuery } from "@mantine/hooks";
 import Markdown from 'react-markdown'
 import TechStack from "./TechStack";
 import Playable from "./Playable";
@@ -11,7 +10,7 @@ import { useParams } from "react-router-dom";
 import { getProjects } from "../lib/getProjects";
 
 export default function ProjectPage() {
-  const { slug } = useParams();
+  const {slug} = useParams();
   const [project, setProject] = useState<Project | null>(null);
   const [activeTab, setActiveTab] = useState<string | null>("description");
 

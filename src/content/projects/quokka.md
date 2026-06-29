@@ -21,4 +21,4 @@ I decided on doing so for my own toy language rather than an existing one so as 
 
 ## Language Features
 
-Quokka is a dynamically typed, object-oriented toy programming language. You can see details of the language features and their syntax [in the docs on GitHub](https://github.com/Turnlings/quokka-interpreter/blob/main/docs/FEATURES.md){:target="_blank" rel="noopener"}.
+Quokka is a dynamically typed, object-oriented toy programming language. You can see details of the language features and their syntax [in the docs on GitHub](https://github.com/Turnlings/quokka-interpreter/blob/main/docs/FEATURES.md).

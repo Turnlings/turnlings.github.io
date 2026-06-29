@@ -29,8 +29,6 @@ I built this game in 4 days and it was good practice not just in the relevant te
 
 Since then I have sporadically updated the game with mostly QOL features. As I gained inspiration, this was my go-to game to update for about a year.
 
-<iframe frameborder="0" src="https://itch.io/embed/2909666?border_width=0&amp;bg_color=f0f0f0&amp;fg_color=242424&amp;link_color=242424&amp;border_color=5b5b5b" width="550" height="165"><a href="https://turnlings.itch.io/ladder-lord">Ladder Lord by Turnlings</a></iframe>
-
 ## Images
 ![Tutorial](/assets/images/ladder_lord/tutorial.png)
 The tutorial section

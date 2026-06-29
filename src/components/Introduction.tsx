@@ -1,4 +1,5 @@
 import { Button, Group, Text, Title } from "@mantine/core";
+import { IconBrandGithub, IconMail } from "@tabler/icons-react";
 
 export default function Introduction() {
   return (
@@ -14,8 +15,17 @@ export default function Introduction() {
           target="_blank"
           rel="noopener noreferrer"
           variant="default"
+          leftSection={<IconBrandGithub />}
         >
           Github
+        </Button>
+        <Button
+          component="a"
+          href="mailto:ryan.turner.dev@gmail.com"
+          variant="default"
+          leftSection={<IconMail />}
+        >
+          Email
         </Button>
       </Group>
     </div>
