@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className="h-14 border-b border-b-gray-300 dark:border-b-dark-400">
       <Container h="100%">
-        <Group h="100%" justify="flex-end" gap="md" visibleFrom="xs">
+        <Group h="100%" justify="flex-end" gap="md">
           {items}
         </Group>
       </Container>
