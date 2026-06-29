@@ -2,7 +2,7 @@ import { Container, Group, Text } from "@mantine/core";
 
 const links = [
   { link: '/', label: 'Home' },
-  { link: '#projects', label: 'Projects' },
+  { link: '/#/projects', label: 'Projects' },
 ];
 
 export default function Header() {

@@ -23,6 +23,7 @@ export default function App() {
                 </Stack>
               }/>
               <Route path="projects/:slug" element={<ProjectPage />}></Route>
+              <Route path="projects" element={<Projects />}></Route>
             </Routes>
           </HashRouter>
         </Container>

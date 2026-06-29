@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getProjects } from '../lib/getProjects';
 import ProjectCard from './ProjectCard';
-import { ActionIcon, Text, TextInput } from '@mantine/core';
+import { ActionIcon, Stack, Text, TextInput } from '@mantine/core';
 import { IconArrowRight, IconSearch } from '@tabler/icons-react';
 import type { Project } from '../types/project';
 
@@ -21,37 +21,37 @@ export default function Projects() {
   ).sort((a: Project, b: Project) => (a.order ?? 0) - (b.order ?? 0));
 
   return (
-    <>
-    <TextInput
-      id="projects"
-      radius="xl"
-      size="md"
-      placeholder="Search projects"
-      rightSectionWidth={42}
-      leftSection={<IconSearch size={18} stroke={1.5} />}
-      rightSection={
-        <ActionIcon
-          size={32}
-          radius="xl"
-          variant="filled"
-          aria-label="Search"
-        >
-          <IconArrowRight size={18} stroke={1.5} />
-        </ActionIcon>
-      }
-      aria-label="Search projects"
-      onChange={(event) => setSearchTerm(event.currentTarget.value)}
-    />
-    <div className="grid gap-4 grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 items-stretch">
-      {filteredProjects.map((p) => (
-        <div key={p.slug} className="h-full">
-          <ProjectCard project={p}/>
-        </div>
-      ))}
-    </div>
-    {filteredProjects.length === 0 && (
-      <Text c="dimmed" ta="center" my="lg">No projects match your search</Text>
-    )}
-    </>
+    <Stack gap="xl">
+      <TextInput
+        id="projects"
+        radius="xl"
+        size="md"
+        placeholder="Search projects"
+        rightSectionWidth={42}
+        leftSection={<IconSearch size={18} stroke={1.5} />}
+        rightSection={
+          <ActionIcon
+            size={32}
+            radius="xl"
+            variant="filled"
+            aria-label="Search"
+          >
+            <IconArrowRight size={18} stroke={1.5} />
+          </ActionIcon>
+        }
+        aria-label="Search projects"
+        onChange={(event) => setSearchTerm(event.currentTarget.value)}
+      />
+      <div className="grid gap-4 grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 items-stretch">
+        {filteredProjects.map((p) => (
+          <div key={p.slug} className="h-full">
+            <ProjectCard project={p}/>
+          </div>
+        ))}
+      </div>
+      {filteredProjects.length === 0 && (
+        <Text c="dimmed" ta="center" my="lg">No projects match your search</Text>
+      )}
+    </Stack>
   );
 }
