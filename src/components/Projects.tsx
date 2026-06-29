@@ -5,13 +5,7 @@ import { ActionIcon, Grid, GridCol, Text, TextInput } from '@mantine/core';
 import { IconArrowRight, IconSearch } from '@tabler/icons-react';
 import type { Project } from '../types/project';
 
-interface ProjectsProps {
-  selected: Project | null;
-  setProject: (project: Project | null) => void;
-  setProjectModalOpen: (open: boolean) => void;
-}
-
-export default function Projects({selected, setProject, setProjectModalOpen}: ProjectsProps) {
+export default function Projects() {
   const [projects, setProjects] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -51,7 +45,7 @@ export default function Projects({selected, setProject, setProjectModalOpen}: Pr
     <div className="grid gap-4 grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 items-stretch">
       {filteredProjects.map((p) => (
         <div key={p.slug} className="h-full">
-          <ProjectCard project={p} setProject={setProject} setProjectModalOpen={setProjectModalOpen} />
+          <ProjectCard project={p}/>
         </div>
       ))}
     </div>

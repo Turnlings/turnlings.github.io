@@ -2,14 +2,9 @@ import { Badge, Button, Card, CardSection, Divider, Group, Image, Stack, Text } 
 import ExternalLinkButton from "./ExternalLinkButton";
 import type { Project } from "../types/project";
 import TechStack from "./TechStack";
+import { Link } from "react-router-dom";
 
-interface ProjectCardProps {
-  project: Project;
-  setProject: (project: Project) => void;
-  setProjectModalOpen: (open: boolean) => void;
-}
-
-export default function ProjectCard({ project, setProject, setProjectModalOpen }: ProjectCardProps) {
+export default function ProjectCard({project}: {project: Project}) {
 
   return (
     <Card withBorder radius="md" padding="md" h="100%">
@@ -41,15 +36,7 @@ export default function ProjectCard({ project, setProject, setProjectModalOpen }
           {project.github_url && (
             <ExternalLinkButton text={"Github"} link_url={project.github_url}/>
           )}
-          <Button
-            variant="filled"
-            onClick={() => {
-              setProject(project)
-              setProjectModalOpen(true)
-            }}
-          >
-            View
-          </Button>
+          <Link to={`/projects/${project.slug}`}>View Details</Link>
         </Group>
       </Stack>
     </Card>
