@@ -8,12 +8,6 @@ const items: {
   lineVariant?: "dashed" | "solid" | "dotted";
 }[] = [
   {
-    position: "Graduate Software Engineer",
-    company: "Lockheed Martin",
-    date: "2026 -",
-    lineVariant: "dashed"
-  },
-  {
     position: "BSc Computer Science",
     company: "The University of Sheffield",
     date: "2023 - 2026"

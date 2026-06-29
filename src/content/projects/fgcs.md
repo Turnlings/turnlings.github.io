@@ -1,6 +1,6 @@
 ---
 title: FGCS
-description: Avis Drone Labs ground control station.
+description: Modern ground control station for ArduPilot.
 layout: project
 link_name: fgcs.avisdronelabs.uk
 link_url: https://fgcs.avisdronelabs.uk/
